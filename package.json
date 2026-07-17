@@ -1,0 +1,24 @@
+{
+  "name": "formac-formacao",
+  "version": "2.0.0",
+  "description": "Site FORMAC Formação com autenticação real, MongoDB e checkout Pix via NexusPag",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "gen-admin-hash": "node scripts/gerar-hash-admin.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "axios": "^1.7.2",
+    "dotenv": "^16.4.5",
+    "helmet": "^7.1.0",
+    "express-rate-limit": "^7.4.0",
+    "mongoose": "^8.5.0",
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^9.0.2",
+    "cookie-parser": "^1.4.6"
+  }
+}

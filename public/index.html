@@ -1,0 +1,2151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FORMAC Formação | Cursos Profissionalizantes em Segurança e Emergência</title>
+<meta name="description" content="FORMAC Formação — cursos reconhecidos de Vigilante, Escolta Armada, Bombeiro Civil, Segurança Pessoal Privada e mais. Certificação profissional com qualidade e credibilidade.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+/* ============================================================
+   FORMAC FORMAÇÃO — DESIGN SYSTEM
+   Paleta: Azul-marinho institucional + Dourado (insígnia) + Branco
+   ============================================================ */
+:root{
+  --navy-950:#060e1e;
+  --navy-900:#0b1a33;
+  --navy-800:#122444;
+  --navy-700:#1a3159;
+  --navy-600:#24406f;
+  --gold-600:#a9791a;
+  --gold-500:#c79a2b;
+  --gold-400:#d9b64f;
+  --gold-300:#ecd28a;
+  --white:#ffffff;
+  --off:#f6f7fa;
+  --off-2:#eef0f5;
+  --ink:#0b1a33;
+  --ink-soft:#425274;
+  --muted:#8792a8;
+  --line:#e2e6ee;
+  --success:#1e8a5f;
+  --danger:#b3413a;
+
+  --font-display:'Fraunces', serif;
+  --font-body:'Inter', sans-serif;
+  --font-mono:'JetBrains Mono', monospace;
+
+  --radius-s:6px;
+  --radius-m:12px;
+  --radius-l:20px;
+  --shadow-soft:0 8px 30px rgba(11,26,51,0.08);
+  --shadow-card:0 4px 18px rgba(11,26,51,0.10);
+  --shadow-lift:0 20px 45px rgba(11,26,51,0.18);
+}
+
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  font-family:var(--font-body);
+  color:var(--ink);
+  background:var(--white);
+  -webkit-font-smoothing:antialiased;
+  line-height:1.55;
+}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+h1,h2,h3,h4{font-family:var(--font-display);margin:0;color:var(--navy-900);letter-spacing:-0.01em;}
+p{margin:0;}
+button{font-family:inherit;cursor:pointer;border:none;background:none;}
+.hidden{display:none !important;}
+::selection{background:var(--gold-300);color:var(--navy-950);}
+@media (prefers-reduced-motion: reduce){
+  *{animation-duration:0.001ms !important;transition-duration:0.001ms !important;}
+}
+
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px;}
+
+/* ---------- Buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  padding:13px 26px;border-radius:999px;font-weight:600;font-size:14.5px;
+  transition:transform .18s ease, box-shadow .18s ease, background .18s ease, color .18s ease;
+  white-space:nowrap;
+}
+.btn:active{transform:scale(0.97);}
+.btn-gold{background:linear-gradient(135deg,var(--gold-400),var(--gold-600));color:var(--navy-950);box-shadow:0 6px 18px rgba(199,154,43,0.35);}
+.btn-gold:hover{box-shadow:0 10px 26px rgba(199,154,43,0.48);transform:translateY(-1px);}
+.btn-navy{background:var(--navy-900);color:var(--white);}
+.btn-navy:hover{background:var(--navy-800);transform:translateY(-1px);}
+.btn-ghost{background:transparent;color:var(--navy-900);border:1.5px solid var(--line);}
+.btn-ghost:hover{border-color:var(--navy-900);}
+.btn-outline-white{background:transparent;color:var(--white);border:1.5px solid rgba(255,255,255,0.45);}
+.btn-outline-white:hover{background:rgba(255,255,255,0.1);border-color:var(--white);}
+.btn-block{width:100%;}
+.btn-sm{padding:9px 18px;font-size:13px;}
+.btn-danger{background:var(--danger);color:#fff;}
+.btn[disabled]{opacity:0.5;cursor:not-allowed;transform:none;}
+
+/* ---------- Header ---------- */
+.site-header{
+  position:sticky;top:0;z-index:500;background:rgba(11,26,51,0.97);
+  backdrop-filter:blur(10px);border-bottom:1px solid rgba(199,154,43,0.18);
+}
+.header-row{display:flex;align-items:center;justify-content:space-between;height:76px;gap:24px;}
+.brand{display:flex;align-items:center;gap:10px;}
+.brand-mark{
+  width:38px;height:38px;border-radius:9px;
+  background:linear-gradient(135deg,var(--gold-400),var(--gold-600));
+  display:flex;align-items:center;justify-content:center;color:var(--navy-950);font-size:17px;
+  box-shadow:0 4px 12px rgba(199,154,43,0.4);
+}
+.brand-text{font-family:var(--font-display);font-weight:700;font-size:20px;color:var(--white);}
+.brand-text em{font-style:normal;color:var(--gold-400);}
+.brand-text.light{color:var(--white);}
+.main-nav{display:flex;gap:30px;flex:1;justify-content:center;}
+.main-nav a{color:rgba(255,255,255,0.78);font-size:14.5px;font-weight:500;transition:color .15s;position:relative;}
+.main-nav a:hover{color:var(--gold-300);}
+.header-actions{display:flex;align-items:center;gap:10px;}
+.header-actions .btn-ghost{color:var(--white);border-color:rgba(255,255,255,0.3);}
+.header-actions .btn-ghost:hover{border-color:var(--gold-400);color:var(--gold-300);}
+.hamburger{display:none;color:var(--white);font-size:22px;}
+#authArea{display:flex;gap:10px;}
+.user-chip{display:flex;align-items:center;gap:10px;background:rgba(255,255,255,0.08);padding:6px 14px 6px 6px;border-radius:999px;}
+.user-chip img,.user-chip .avatar-fallback{width:30px;height:30px;border-radius:50%;object-fit:cover;background:var(--gold-500);color:var(--navy-950);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;}
+.user-chip span{color:#fff;font-size:13.5px;font-weight:600;}
+.user-chip{color:#fff;position:relative;}
+.user-menu{position:relative;}
+.user-dropdown{position:absolute;top:52px;right:0;background:#fff;border-radius:12px;box-shadow:var(--shadow-lift);min-width:210px;padding:8px;display:none;z-index:50;}
+.user-dropdown.open{display:block;}
+.user-dropdown a,.user-dropdown button{display:flex;align-items:center;gap:10px;width:100%;text-align:left;padding:10px 12px;border-radius:8px;font-size:14px;color:var(--ink);font-weight:500;}
+.user-dropdown a:hover,.user-dropdown button:hover{background:var(--off);}
+.user-dropdown hr{border:none;border-top:1px solid var(--line);margin:6px 0;}
+
+/* ---------- Hero ---------- */
+.hero{
+  position:relative;overflow:hidden;
+  background:radial-gradient(ellipse 120% 80% at 50% -10%, var(--navy-700), var(--navy-950) 65%);
+  padding:96px 0 120px;color:#fff;
+}
+.hero::before{
+  content:"";position:absolute;inset:0;
+  background-image:
+    repeating-linear-gradient(115deg, rgba(199,154,43,0.05) 0px, rgba(199,154,43,0.05) 1px, transparent 1px, transparent 90px);
+  pointer-events:none;
+}
+.hero-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:60px;align-items:center;position:relative;}
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:8px;padding:7px 16px;border-radius:999px;
+  background:rgba(199,154,43,0.14);border:1px solid rgba(199,154,43,0.4);color:var(--gold-300);
+  font-size:12.5px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:24px;
+}
+.hero h1{font-size:clamp(34px,4.6vw,58px);line-height:1.06;color:#fff;font-weight:600;}
+.hero h1 em{font-style:normal;color:var(--gold-400);}
+.hero-sub{margin-top:22px;font-size:18px;color:rgba(255,255,255,0.72);max-width:520px;}
+.hero-actions{display:flex;gap:14px;margin-top:36px;flex-wrap:wrap;}
+.hero-trust{display:flex;gap:28px;margin-top:48px;flex-wrap:wrap;}
+.hero-trust div{display:flex;flex-direction:column;}
+.hero-trust strong{font-family:var(--font-display);font-size:26px;color:var(--gold-300);}
+.hero-trust span{font-size:12.5px;color:rgba(255,255,255,0.6);}
+
+.hero-visual{position:relative;}
+.hero-badge-card{
+  background:linear-gradient(160deg, var(--navy-800), var(--navy-900));
+  border:1px solid rgba(199,154,43,0.3);border-radius:24px;padding:32px;
+  box-shadow:0 30px 60px rgba(0,0,0,0.4);
+}
+.hero-badge-card img{border-radius:16px;width:100%;height:280px;object-fit:cover;}
+.seal{
+  position:absolute;top:-26px;right:-18px;width:96px;height:96px;border-radius:50%;
+  background:radial-gradient(circle at 32% 28%, var(--gold-300), var(--gold-600) 75%);
+  display:flex;align-items:center;justify-content:center;flex-direction:column;color:var(--navy-950);
+  box-shadow:0 12px 26px rgba(0,0,0,0.35);border:3px solid var(--navy-950);
+  font-family:var(--font-display);text-align:center;
+}
+.seal .seal-num{font-size:20px;font-weight:800;line-height:1;}
+.seal .seal-txt{font-size:8px;letter-spacing:0.05em;text-transform:uppercase;font-weight:700;margin-top:2px;}
+.hero-mini-list{margin-top:18px;display:flex;flex-direction:column;gap:10px;}
+.hero-mini-list li{list-style:none;display:flex;gap:10px;align-items:center;color:rgba(255,255,255,0.85);font-size:14px;}
+.hero-mini-list i{color:var(--gold-400);}
+
+/* ---------- Section generic ---------- */
+.section{padding:96px 0;}
+.section-alt{background:var(--off);}
+.section-navy{background:var(--navy-950);color:#fff;}
+.eyebrow{
+  font-size:12.5px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold-600);
+  display:flex;align-items:center;gap:10px;margin-bottom:14px;
+}
+.eyebrow::before{content:"";width:26px;height:2px;background:var(--gold-500);display:inline-block;}
+.section-navy .eyebrow{color:var(--gold-400);}
+.section-head{max-width:640px;margin-bottom:56px;}
+.section-head.center{margin-left:auto;margin-right:auto;text-align:center;}
+.section-head h2{font-size:clamp(28px,3.2vw,42px);font-weight:600;}
+.section-head p{margin-top:16px;color:var(--ink-soft);font-size:16.5px;}
+.section-navy .section-head h2{color:#fff;}
+.section-navy .section-head p{color:rgba(255,255,255,0.65);}
+
+/* ---------- Benefícios ---------- */
+.benefits-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
+.benefit-card{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius-l);padding:32px 26px;
+  transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+.benefit-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-card);border-color:var(--gold-400);}
+.benefit-icon{
+  width:52px;height:52px;border-radius:14px;background:var(--navy-900);color:var(--gold-400);
+  display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:20px;
+}
+.benefit-card h3{font-size:18px;font-weight:600;margin-bottom:10px;}
+.benefit-card p{color:var(--ink-soft);font-size:14.5px;}
+
+/* ---------- Stats ---------- */
+.stats-bar{
+  background:linear-gradient(120deg, var(--navy-900), var(--navy-800));
+  border-radius:var(--radius-l);padding:52px 40px;display:grid;grid-template-columns:repeat(4,1fr);
+  gap:20px;color:#fff;margin-top:-60px;position:relative;z-index:2;box-shadow:var(--shadow-lift);
+}
+.stat-item{text-align:center;border-right:1px solid rgba(255,255,255,0.12);}
+.stat-item:last-child{border-right:none;}
+.stat-item i{color:var(--gold-400);font-size:20px;margin-bottom:10px;}
+.stat-num{font-family:var(--font-display);font-size:38px;font-weight:700;color:#fff;}
+.stat-label{font-size:13px;color:rgba(255,255,255,0.65);margin-top:4px;}
+
+/* ---------- Courses ---------- */
+.course-filters{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:36px;}
+.chip{padding:9px 18px;border-radius:999px;border:1.5px solid var(--line);font-size:13.5px;font-weight:600;color:var(--ink-soft);transition:all .15s;}
+.chip.active,.chip:hover{border-color:var(--navy-900);background:var(--navy-900);color:#fff;}
+.courses-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;}
+.course-card{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius-l);overflow:hidden;
+  display:flex;flex-direction:column;transition:transform .22s ease, box-shadow .22s ease;
+}
+.course-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lift);}
+.course-img-wrap{position:relative;height:190px;overflow:hidden;}
+.course-img-wrap img{width:100%;height:100%;object-fit:cover;transition:transform .4s ease;}
+.course-card:hover .course-img-wrap img{transform:scale(1.06);}
+.course-tag{position:absolute;top:14px;left:14px;background:rgba(11,26,51,0.85);color:var(--gold-300);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.04em;padding:6px 12px;border-radius:999px;backdrop-filter:blur(4px);}
+.course-body{padding:22px 22px 24px;display:flex;flex-direction:column;flex:1;}
+.course-body h3{font-size:19px;font-weight:600;margin-bottom:8px;}
+.course-meta{display:flex;gap:14px;color:var(--muted);font-size:12.5px;margin-bottom:12px;flex-wrap:wrap;}
+.course-meta span{display:flex;align-items:center;gap:5px;}
+.course-body p.desc{font-size:14px;color:var(--ink-soft);margin-bottom:18px;flex:1;}
+.course-footer{display:flex;align-items:center;justify-content:space-between;padding-top:16px;border-top:1px dashed var(--line);}
+.course-price{display:flex;flex-direction:column;}
+.course-price small{color:var(--muted);font-size:11px;}
+.course-price strong{font-family:var(--font-display);font-size:22px;color:var(--navy-900);}
+.pix-tag{display:inline-flex;align-items:center;gap:5px;font-size:11px;color:var(--success);font-weight:700;margin-top:2px;}
+
+/* ---------- Course detail ---------- */
+.course-detail-hero{background:var(--navy-950);color:#fff;padding:60px 0 80px;}
+.breadcrumb{font-size:13px;color:rgba(255,255,255,0.5);margin-bottom:20px;}
+.breadcrumb a{color:var(--gold-400);}
+.course-detail-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:50px;align-items:start;margin-top:-50px;position:relative;z-index:2;}
+.detail-img{border-radius:var(--radius-l);overflow:hidden;box-shadow:var(--shadow-lift);height:340px;}
+.detail-img img{width:100%;height:100%;object-fit:cover;}
+.detail-card{background:#fff;border-radius:var(--radius-l);box-shadow:var(--shadow-lift);padding:30px;position:sticky;top:100px;}
+.detail-card .price-big{font-family:var(--font-display);font-size:36px;color:var(--navy-900);font-weight:700;}
+.detail-card .price-note{color:var(--muted);font-size:13px;margin-bottom:22px;}
+.detail-info-row{display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--line);font-size:14px;}
+.detail-info-row span:first-child{color:var(--muted);}
+.detail-info-row span:last-child{font-weight:600;}
+.syllabus-list{margin-top:14px;display:flex;flex-direction:column;gap:12px;}
+.syllabus-list div{display:flex;gap:12px;align-items:flex-start;font-size:14.5px;color:var(--ink-soft);}
+.syllabus-list i{color:var(--gold-500);margin-top:3px;}
+.cert-callout{margin-top:22px;background:var(--off);border-left:3px solid var(--gold-500);padding:16px 18px;border-radius:8px;font-size:13.5px;color:var(--ink-soft);}
+
+/* ---------- Testimonials ---------- */
+.testi-track{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.testi-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius-l);padding:28px;}
+.testi-stars{color:var(--gold-500);font-size:13px;margin-bottom:14px;}
+.testi-card p.quote{font-size:15px;color:var(--ink-soft);font-style:italic;margin-bottom:20px;}
+.testi-person{display:flex;align-items:center;gap:12px;}
+.testi-person img{width:42px;height:42px;border-radius:50%;object-fit:cover;}
+.testi-person strong{font-size:14px;display:block;}
+.testi-person span{font-size:12px;color:var(--muted);}
+
+/* ---------- Plans ---------- */
+.plans-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
+.plan-card{background:#fff;border:1.5px solid var(--line);border-radius:var(--radius-l);padding:34px 28px;position:relative;transition:transform .2s;}
+.plan-card:hover{transform:translateY(-6px);}
+.plan-card.highlight{border-color:var(--gold-500);box-shadow:var(--shadow-lift);}
+.plan-tag{position:absolute;top:-13px;left:28px;background:var(--gold-500);color:var(--navy-950);font-size:11px;font-weight:700;padding:5px 14px;border-radius:999px;text-transform:uppercase;letter-spacing:0.03em;}
+.plan-card h3{font-size:21px;margin-bottom:10px;}
+.plan-card p.plan-desc{color:var(--ink-soft);font-size:14px;margin-bottom:20px;}
+.plan-features{display:flex;flex-direction:column;gap:10px;margin-bottom:26px;}
+.plan-features div{display:flex;gap:10px;align-items:flex-start;font-size:13.5px;color:var(--ink-soft);}
+.plan-features i{color:var(--success);margin-top:3px;}
+
+/* ---------- FAQ ---------- */
+.faq-list{max-width:800px;margin:0 auto;}
+.faq-item{border-bottom:1px solid var(--line);}
+.faq-q{display:flex;justify-content:space-between;align-items:center;padding:22px 4px;font-weight:600;font-size:16px;}
+.faq-q i{color:var(--gold-500);transition:transform .2s;}
+.faq-item.open .faq-q i{transform:rotate(45deg);}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease;}
+.faq-item.open .faq-a{max-height:300px;}
+.faq-a p{padding:0 4px 22px;color:var(--ink-soft);font-size:14.5px;}
+
+/* ---------- Contact ---------- */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;}
+.contact-form{display:flex;flex-direction:column;gap:16px;}
+.contact-form label{font-size:13.5px;font-weight:600;color:var(--ink);display:flex;flex-direction:column;gap:6px;}
+.contact-form input,.contact-form textarea,.contact-form select{
+  padding:13px 14px;border-radius:10px;border:1.5px solid var(--line);font-family:inherit;font-size:14.5px;
+  transition:border-color .15s;
+}
+.contact-form input:focus,.contact-form textarea:focus,.contact-form select:focus{outline:none;border-color:var(--gold-500);}
+.contact-info-card{background:var(--navy-950);color:#fff;border-radius:var(--radius-l);padding:36px;}
+.contact-info-row{display:flex;gap:16px;align-items:flex-start;margin-bottom:24px;}
+.contact-info-row i{width:38px;height:38px;border-radius:10px;background:rgba(199,154,43,0.15);color:var(--gold-400);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.contact-info-row strong{display:block;margin-bottom:3px;}
+.contact-info-row span{color:rgba(255,255,255,0.62);font-size:13.5px;}
+.map-placeholder{margin-top:10px;border-radius:14px;height:160px;background:linear-gradient(135deg, var(--navy-800), var(--navy-700));display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.4);font-size:13px;border:1px dashed rgba(255,255,255,0.2);}
+
+/* ---------- Footer ---------- */
+.site-footer{background:var(--navy-950);color:rgba(255,255,255,0.7);padding:70px 0 0;}
+.footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:40px;padding-bottom:50px;}
+.footer-col h4{color:#fff;font-size:14px;margin-bottom:18px;text-transform:uppercase;letter-spacing:0.04em;}
+.footer-col{display:flex;flex-direction:column;gap:12px;font-size:14px;}
+.footer-col a:hover{color:var(--gold-400);}
+.footer-brand p{font-size:13.5px;line-height:1.7;margin-top:4px;}
+.social-row{display:flex;gap:10px;margin-top:18px;}
+.social-row a{width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;transition:background .15s;}
+.social-row a:hover{background:var(--gold-500);color:var(--navy-950);}
+.footer-bottom{display:flex;justify-content:space-between;padding:22px 0;border-top:1px solid rgba(255,255,255,0.08);font-size:12.5px;color:rgba(255,255,255,0.45);flex-wrap:wrap;gap:8px;}
+
+/* ---------- WhatsApp float ---------- */
+.wa-float{
+  position:fixed;bottom:26px;right:26px;width:60px;height:60px;border-radius:50%;
+  background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;font-size:28px;
+  box-shadow:0 10px 26px rgba(37,211,102,0.5);z-index:600;animation:pulse-wa 2.4s infinite;
+}
+.wa-float:hover{transform:scale(1.08);}
+@keyframes pulse-wa{
+  0%{box-shadow:0 10px 26px rgba(37,211,102,0.5),0 0 0 0 rgba(37,211,102,0.5);}
+  70%{box-shadow:0 10px 26px rgba(37,211,102,0.5),0 0 0 14px rgba(37,211,102,0);}
+  100%{box-shadow:0 10px 26px rgba(37,211,102,0.5),0 0 0 0 rgba(37,211,102,0);}
+}
+
+/* ---------- Modals ---------- */
+.modal-overlay{
+  position:fixed;inset:0;background:rgba(6,14,30,0.72);backdrop-filter:blur(3px);
+  display:none;align-items:center;justify-content:center;z-index:1000;padding:20px;
+}
+.modal-overlay.open{display:flex;}
+.modal{background:#fff;border-radius:var(--radius-l);padding:36px;max-width:460px;width:100%;position:relative;max-height:88vh;overflow-y:auto;box-shadow:var(--shadow-lift);animation:modal-in .22s ease;}
+@keyframes modal-in{from{opacity:0;transform:translateY(14px) scale(0.98);}to{opacity:1;transform:translateY(0) scale(1);}}
+.modal-close{position:absolute;top:18px;right:18px;font-size:18px;color:var(--muted);width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;transition:background .15s;}
+.modal-close:hover{background:var(--off);color:var(--ink);}
+.pay-modal,.cert-modal{max-width:560px;}
+
+.auth-tabs{display:flex;gap:8px;margin-bottom:26px;background:var(--off);padding:5px;border-radius:12px;}
+.auth-tab{flex:1;padding:11px;border-radius:9px;font-weight:600;font-size:14px;color:var(--muted);}
+.auth-tab.active{background:#fff;color:var(--navy-900);box-shadow:0 2px 8px rgba(0,0,0,0.06);}
+.auth-form{display:flex;flex-direction:column;gap:14px;}
+.auth-form label{font-size:13px;font-weight:600;color:var(--ink);display:flex;flex-direction:column;gap:6px;}
+.auth-form input{padding:12px 14px;border-radius:10px;border:1.5px solid var(--line);font-size:14.5px;font-family:inherit;}
+.auth-form input:focus{outline:none;border-color:var(--gold-500);}
+.checkbox-row{flex-direction:row !important;align-items:flex-start;gap:8px !important;font-size:12.5px;font-weight:500;color:var(--ink-soft);}
+.checkbox-row input{width:16px;height:16px;margin-top:2px;}
+.checkbox-row a{color:var(--gold-600);font-weight:700;}
+.auth-hint{text-align:center;font-size:13px;color:var(--muted);margin-top:6px;}
+.auth-hint a{color:var(--gold-600);font-weight:700;}
+
+/* Pix modal */
+.pix-box{text-align:center;padding:24px;background:var(--off);border-radius:16px;margin:20px 0;}
+.pix-qr{width:180px;height:180px;margin:0 auto 16px;background:#fff;border-radius:12px;padding:10px;border:1px solid var(--line);}
+.pix-code{display:flex;gap:8px;background:#fff;border:1.5px dashed var(--line);border-radius:10px;padding:10px 12px;align-items:center;}
+.pix-code input{flex:1;border:none;font-family:var(--font-mono);font-size:12px;color:var(--ink-soft);background:transparent;}
+.pay-summary{display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--line);font-size:14.5px;}
+.pay-summary.total{font-weight:700;font-size:17px;color:var(--navy-900);border-bottom:none;}
+.pay-steps{display:flex;flex-direction:column;gap:10px;margin-top:18px;font-size:13.5px;color:var(--ink-soft);}
+.pay-steps div{display:flex;gap:10px;}
+.pay-steps span{width:22px;height:22px;border-radius:50%;background:var(--navy-900);color:#fff;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0;}
+
+/* ---------- Student area ---------- */
+.dash-shell{display:grid;grid-template-columns:260px 1fr;min-height:70vh;background:var(--off);}
+.dash-sidebar{background:var(--navy-950);color:#fff;padding:32px 20px;}
+.dash-profile{display:flex;align-items:center;gap:12px;margin-bottom:30px;padding-bottom:24px;border-bottom:1px solid rgba(255,255,255,0.1);}
+.dash-profile img,.dash-profile .avatar-fallback{width:46px;height:46px;border-radius:50%;background:var(--gold-500);color:var(--navy-950);display:flex;align-items:center;justify-content:center;font-weight:800;object-fit:cover;}
+.dash-profile strong{display:block;font-size:14.5px;}
+.dash-profile span{font-size:12px;color:rgba(255,255,255,0.5);}
+.dash-nav{display:flex;flex-direction:column;gap:4px;}
+.dash-nav button{display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:10px;font-size:14px;color:rgba(255,255,255,0.7);font-weight:500;text-align:left;width:100%;}
+.dash-nav button i{width:18px;}
+.dash-nav button.active,.dash-nav button:hover{background:rgba(199,154,43,0.15);color:var(--gold-300);}
+.dash-main{padding:40px;}
+.dash-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:30px;flex-wrap:wrap;gap:14px;}
+.dash-header h2{font-size:26px;}
+.kpi-row{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-bottom:32px;}
+.kpi-card{background:#fff;border-radius:14px;padding:22px;border:1px solid var(--line);}
+.kpi-card i{color:var(--gold-500);font-size:18px;}
+.kpi-num{font-family:var(--font-display);font-size:28px;margin-top:8px;}
+.kpi-label{font-size:12.5px;color:var(--muted);}
+
+.my-course-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px;display:flex;gap:18px;margin-bottom:16px;align-items:center;flex-wrap:wrap;}
+.my-course-card img{width:110px;height:80px;border-radius:10px;object-fit:cover;flex-shrink:0;}
+.my-course-info{flex:1;min-width:220px;}
+.my-course-info h4{font-size:16px;margin-bottom:6px;}
+.progress-bar{height:8px;background:var(--off-2);border-radius:999px;overflow:hidden;margin-top:10px;}
+.progress-fill{height:100%;background:linear-gradient(90deg,var(--gold-400),var(--gold-600));border-radius:999px;transition:width .4s ease;}
+.progress-label{font-size:12px;color:var(--muted);margin-top:6px;}
+.my-course-actions{display:flex;gap:8px;flex-wrap:wrap;}
+
+.player-shell{background:var(--navy-950);border-radius:16px;overflow:hidden;margin-bottom:24px;}
+.player-shell video{width:100%;display:block;max-height:440px;background:#000;}
+.lesson-list{display:flex;flex-direction:column;gap:2px;}
+.lesson-row{display:flex;align-items:center;gap:14px;padding:14px 16px;border-radius:10px;background:#fff;border:1px solid var(--line);cursor:pointer;transition:background .15s;}
+.lesson-row:hover{background:var(--off);}
+.lesson-row.done{border-left:3px solid var(--success);}
+.lesson-row .lesson-check{width:26px;height:26px;border-radius:50%;border:2px solid var(--line);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:11px;color:transparent;}
+.lesson-row.done .lesson-check{background:var(--success);border-color:var(--success);color:#fff;}
+.lesson-row .lesson-title{flex:1;font-size:14px;font-weight:500;}
+.lesson-row .lesson-dur{font-size:12px;color:var(--muted);}
+.material-row{display:flex;align-items:center;justify-content:space-between;padding:14px 16px;background:#fff;border:1px solid var(--line);border-radius:10px;margin-bottom:8px;}
+.material-row i{color:var(--danger);margin-right:10px;}
+
+.rating-stars{display:flex;gap:4px;font-size:22px;color:var(--line);cursor:pointer;}
+.rating-stars i.active{color:var(--gold-500);}
+
+.empty-state{text-align:center;padding:60px 20px;color:var(--muted);}
+.empty-state i{font-size:40px;color:var(--line);margin-bottom:16px;}
+
+/* Admin */
+.admin-shell{display:grid;grid-template-columns:260px 1fr;min-height:100vh;}
+.admin-table{width:100%;border-collapse:collapse;background:#fff;border-radius:14px;overflow:hidden;border:1px solid var(--line);}
+.admin-table th{background:var(--off);text-align:left;padding:12px 16px;font-size:12px;text-transform:uppercase;letter-spacing:0.04em;color:var(--muted);}
+.admin-table td{padding:14px 16px;font-size:14px;border-top:1px solid var(--line);}
+.badge{padding:4px 10px;border-radius:999px;font-size:11px;font-weight:700;}
+.badge.green{background:#e3f6ec;color:var(--success);}
+.badge.gold{background:#fbf1de;color:var(--gold-600);}
+.badge.red{background:#fbe9e8;color:var(--danger);}
+.table-wrap{overflow-x:auto;}
+
+/* Legal pages */
+.legal-page{max-width:800px;margin:0 auto;padding:80px 24px;}
+.legal-page h1{font-size:32px;margin-bottom:20px;}
+.legal-page h3{font-size:19px;margin:28px 0 10px;}
+.legal-page p, .legal-page li{color:var(--ink-soft);font-size:15px;line-height:1.8;}
+.legal-page ul{padding-left:20px;}
+
+/* Toast */
+.toast-host{position:fixed;top:90px;right:24px;z-index:2000;display:flex;flex-direction:column;gap:10px;}
+.toast{background:var(--navy-950);color:#fff;padding:14px 20px;border-radius:12px;box-shadow:var(--shadow-lift);font-size:14px;display:flex;align-items:center;gap:10px;animation:toast-in .25s ease;min-width:260px;}
+.toast.success{border-left:4px solid var(--success);}
+.toast.error{border-left:4px solid var(--danger);}
+@keyframes toast-in{from{opacity:0;transform:translateX(30px);}to{opacity:1;transform:translateX(0);}}
+
+/* Reveal animation */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease, transform .6s ease;}
+.reveal.in{opacity:1;transform:translateY(0);}
+
+/* ---------- Responsive ---------- */
+@media (max-width:1024px){
+  .benefits-grid{grid-template-columns:repeat(2,1fr);}
+  .courses-grid{grid-template-columns:repeat(2,1fr);}
+  .testi-track{grid-template-columns:repeat(2,1fr);}
+  .plans-grid{grid-template-columns:1fr;}
+  .hero-grid{grid-template-columns:1fr;}
+  .hero-visual{order:-1;}
+  .course-detail-grid{grid-template-columns:1fr;}
+  .detail-card{position:static;}
+  .contact-grid{grid-template-columns:1fr;}
+  .dash-shell,.admin-shell{grid-template-columns:1fr;}
+  .dash-sidebar{display:flex;overflow-x:auto;padding:16px;}
+  .dash-profile{display:none;}
+  .dash-nav{flex-direction:row;}
+  .dash-nav button{white-space:nowrap;}
+}
+@media (max-width:720px){
+  .main-nav{
+    position:fixed;top:76px;left:0;right:0;background:var(--navy-950);flex-direction:column;
+    padding:16px 24px 24px;gap:4px;transform:translateY(-130%);transition:transform .25s ease;border-bottom:1px solid rgba(199,154,43,0.2);
+  }
+  .main-nav.open{transform:translateY(0);}
+  .main-nav a{padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.06);}
+  .hamburger{display:block;}
+  #authArea{display:none;}
+  .benefits-grid,.courses-grid,.testi-track{grid-template-columns:1fr;}
+  .stats-bar{grid-template-columns:repeat(2,1fr);row-gap:30px;}
+  .stat-item{border-right:none;}
+  .footer-grid{grid-template-columns:1fr;}
+  .kpi-row{grid-template-columns:repeat(2,1fr);}
+  .section{padding:64px 0;}
+  .hero{padding:56px 0 90px;}
+}
+
+</style>
+</head>
+<body>
+
+<!-- ============ TOAST ============ -->
+<div id="toastHost" class="toast-host"></div>
+
+<!-- ============ WHATSAPP FLOAT ============ -->
+<a class="wa-float" href="https://wa.me/5599981273666" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header" id="siteHeader">
+  <div class="wrap header-row">
+    <a href="#home" class="brand" onclick="showPage('landing');return true;">
+      <span class="brand-mark"><i class="fa-solid fa-shield-halved"></i></span>
+      <span class="brand-text">FORMAC <em>Formação</em></span>
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="#cursos" onclick="closeMobileNav()">Cursos</a>
+      <a href="#beneficios" onclick="closeMobileNav()">Benefícios</a>
+      <a href="#planos" onclick="closeMobileNav()">Planos</a>
+      <a href="#depoimentos" onclick="closeMobileNav()">Depoimentos</a>
+      <a href="#faq" onclick="closeMobileNav()">FAQ</a>
+      <a href="#contato" onclick="closeMobileNav()">Contato</a>
+    </nav>
+    <div class="header-actions">
+      <span id="authArea">
+        <button class="btn btn-ghost" onclick="openAuth('login')">Entrar</button>
+        <button class="btn btn-gold" onclick="openAuth('register')">Cadastre-se</button>
+      </span>
+      <button class="hamburger" id="hamburger" aria-label="Menu" onclick="toggleMobileNav()"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </div>
+</header>
+
+<main id="app"></main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div class="footer-col footer-brand">
+      <div class="brand" style="margin-bottom:14px;">
+        <span class="brand-mark"><i class="fa-solid fa-shield-halved"></i></span>
+        <span class="brand-text light">FORMAC <em>Formação</em></span>
+      </div>
+      <p>Formação profissional reconhecida em segurança privada, escolta armada, combate a incêndio e emergências. Credibilidade que abre portas no mercado de trabalho.</p>
+      <div class="social-row">
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://wa.me/5599981273666" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Instituição</h4>
+      <a href="#" onclick="showPage('sobre');return false;">Sobre a FORMAC</a>
+      <a href="#cursos">Cursos</a>
+      <a href="#" onclick="showPage('admin-login');return false;">Área administrativa</a>
+      <a href="#" onclick="openAuth('login');return false;">Área do aluno</a>
+    </div>
+    <div class="footer-col">
+      <h4>Legal &amp; LGPD</h4>
+      <a href="#" onclick="showPage('privacidade');return false;">Política de Privacidade</a>
+      <a href="#" onclick="showPage('termos');return false;">Termos de Uso</a>
+      <a href="#" onclick="showPage('lgpd');return false;">Proteção de Dados (LGPD)</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contato</h4>
+      <a href="mailto:contato@formacformacao.com.br"><i class="fa-regular fa-envelope"></i> contato@formacformacao.com.br</a>
+      <a href="https://wa.me/5599981273666" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> +55 99 98127-3666</a>
+      <a href="#"><i class="fa-solid fa-location-dot"></i> Imperatriz, Maranhão – Brasil</a>
+    </div>
+  </div>
+  <div class="footer-bottom wrap">
+    <span>© 2026 FORMAC Formação. Todos os direitos reservados.</span>
+    <span>CNPJ 00.000.000/0001-00 · Instituição de Formação Profissional</span>
+  </div>
+</footer>
+
+<!-- ============ AUTH MODAL ============ -->
+<div class="modal-overlay" id="authOverlay">
+  <div class="modal auth-modal">
+    <button class="modal-close" onclick="closeAuth()"><i class="fa-solid fa-xmark"></i></button>
+    <div class="auth-tabs">
+      <button id="tabLogin" class="auth-tab active" onclick="switchAuthTab('login')">Entrar</button>
+      <button id="tabRegister" class="auth-tab" onclick="switchAuthTab('register')">Criar conta</button>
+    </div>
+
+    <form id="loginForm" class="auth-form" onsubmit="return handleLogin(event)">
+      <label>E-mail<input type="email" id="loginEmail" required placeholder="seuemail@exemplo.com"></label>
+      <label>Senha<input type="password" id="loginPassword" required placeholder="••••••••" minlength="6"></label>
+      <button class="btn btn-navy btn-block" type="submit">Entrar na plataforma</button>
+      <p class="auth-hint">Ainda não tem conta? <a href="#" onclick="switchAuthTab('register');return false;">Cadastre-se grátis</a></p>
+    </form>
+
+    <form id="registerForm" class="auth-form hidden" onsubmit="return handleRegister(event)">
+      <label>Nome completo<input type="text" id="regName" required placeholder="Seu nome"></label>
+      <label>CPF<input type="text" id="regCPF" required placeholder="000.000.000-00" maxlength="14"></label>
+      <label>E-mail<input type="email" id="regEmail" required placeholder="seuemail@exemplo.com"></label>
+      <label>WhatsApp<input type="text" id="regPhone" required placeholder="(99) 99999-9999"></label>
+      <label>Senha<input type="password" id="regPassword" required placeholder="Mínimo 6 caracteres" minlength="6"></label>
+      <label class="checkbox-row"><input type="checkbox" id="regLgpd" required> Li e aceito a <a href="#" onclick="showPage('privacidade');return false;">Política de Privacidade</a> e os <a href="#" onclick="showPage('termos');return false;">Termos de Uso</a> (LGPD)</label>
+      <button class="btn btn-gold btn-block" type="submit">Criar minha conta</button>
+      <p class="auth-hint">Já tem conta? <a href="#" onclick="switchAuthTab('login');return false;">Entrar</a></p>
+    </form>
+  </div>
+</div>
+
+<!-- ============ ENROLL / PAYMENT MODAL ============ -->
+<div class="modal-overlay" id="payOverlay">
+  <div class="modal pay-modal" id="payModalContent"></div>
+</div>
+
+<!-- ============ CERTIFICATE MODAL ============ -->
+<div class="modal-overlay" id="certOverlay">
+  <div class="modal cert-modal" id="certModalContent"></div>
+</div>
+
+<script>
+/* ============================================================
+   FORMAC FORMAÇÃO — BASE DE DADOS
+   Em produção, isto deve vir de uma API/Banco de Dados real.
+   ============================================================ */
+
+const COURSES = [
+  {
+    id: "vigilante",
+    name: "Formação de Vigilante",
+    category: "Segurança Privada",
+    price: 1590.00,
+    duration: "200 horas/aula",
+    modality: "Presencial + EAD teórico",
+    image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=900&q=80",
+    summary: "Curso reconhecido pela Polícia Federal para atuação como vigilante em empresas de segurança privada, bancos, condomínios e eventos.",
+    description: "A Formação de Vigilante prepara o aluno para todas as etapas exigidas pela legislação vigente para atuação profissional em segurança privada, incluindo defesa pessoal, armamento e tiro, direitos humanos e técnicas operacionais. Curso homologado, com corpo docente formado por instrutores credenciados e experiência prática em estande de tiro.",
+    syllabus: [
+      "Ética e Direitos Humanos aplicados à segurança",
+      "Legislação de Segurança Privada",
+      "Armamento e Tiro Defensivo",
+      "Defesa Pessoal e Uso Progressivo da Força",
+      "Técnicas de Abordagem e Prevenção de Perdas",
+      "Primeiros Socorros",
+      "Relações Humanas no Trabalho",
+      "Prática de Estágio Supervisionado"
+    ],
+    certificate: "Certificado reconhecido pela Polícia Federal (curso homologado), válido em todo o território nacional.",
+    lessons: 32
+  },
+  {
+    id: "reciclagem-vigilante",
+    name: "Reciclagem de Vigilante",
+    category: "Segurança Privada",
+    price: 550.00,
+    duration: "40 horas/aula",
+    modality: "Presencial",
+    image: "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=900&q=80",
+    summary: "Atualização obrigatória a cada dois anos para vigilantes já formados, mantendo o registro profissional ativo junto à Polícia Federal.",
+    description: "Curso de reciclagem exigido por lei para renovação da Carteira Nacional de Vigilante (CNV). Atualiza conhecimentos em legislação, tiro defensivo, direitos humanos e técnicas operacionais, garantindo que o profissional permaneça apto e regularizado para o exercício da função.",
+    syllabus: [
+      "Atualização em Legislação de Segurança Privada",
+      "Revisão de Armamento e Tiro",
+      "Direitos Humanos e Uso da Força",
+      "Técnicas de Abordagem Atualizadas",
+      "Avaliação Prática e Teórica"
+    ],
+    certificate: "Certificado de reciclagem reconhecido pela Polícia Federal, válido para renovação da CNV.",
+    lessons: 12
+  },
+  {
+    id: "escolta-armada",
+    name: "Escolta Armada",
+    category: "Segurança Privada",
+    price: 890.00,
+    duration: "60 horas/aula",
+    modality: "Presencial",
+    image: "https://images.unsplash.com/photo-1618477388954-7852f32655ec?auto=format&fit=crop&w=900&q=80",
+    summary: "Especialização para vigilantes que desejam atuar em escolta de veículos, cargas e pessoas de alto valor.",
+    description: "Curso de especialização voltado a vigilantes já formados que desejam atuar em operações de escolta armada. Aborda planejamento de rotas, condução defensiva, procedimentos em caso de assalto e trabalho em equipe tática, seguindo as exigências da Polícia Federal para a função.",
+    syllabus: [
+      "Planejamento e Reconhecimento de Rotas",
+      "Condução Defensiva e Evasiva",
+      "Táticas de Escolta em Comboio",
+      "Procedimentos em Situações de Assalto",
+      "Comunicação e Trabalho em Equipe",
+      "Legislação Específica de Escolta Armada"
+    ],
+    certificate: "Certificado de especialização reconhecido pela Polícia Federal.",
+    lessons: 18,
+    prerequisite: "Curso de Formação de Vigilante concluído"
+  },
+  {
+    id: "transporte-valores",
+    name: "Transporte de Valores",
+    category: "Segurança Privada",
+    price: 840.00,
+    duration: "60 horas/aula",
+    modality: "Presencial",
+    image: "https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=900&q=80",
+    summary: "Formação especializada para atuação em transporte de numerário e valores em carros-fortes.",
+    description: "Especialização voltada para vigilantes que atuarão em empresas de transporte de valores, cobrindo procedimentos operacionais de carro-forte, segurança em pontos de carga e descarga, prevenção de roubos e normas específicas da atividade.",
+    syllabus: [
+      "Normas da Atividade de Transporte de Valores",
+      "Procedimentos de Carga e Descarga Segura",
+      "Rotinas Operacionais em Carro-Forte",
+      "Prevenção e Reação a Assaltos",
+      "Uso de Equipamentos e Cofres Eletrônicos"
+    ],
+    certificate: "Certificado de especialização reconhecido pela Polícia Federal.",
+    lessons: 18,
+    prerequisite: "Curso de Formação de Vigilante concluído"
+  },
+  {
+    id: "seguranca-pessoal",
+    name: "Segurança Pessoal Privada",
+    category: "Segurança Privada",
+    price: 1140.00,
+    duration: "80 horas/aula",
+    modality: "Presencial + EAD teórico",
+    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=900&q=80",
+    summary: "Torne-se um profissional de proteção pessoal (bodyguard), atuando na segurança de executivos, autoridades e eventos.",
+    description: "Curso completo para formação de agentes de segurança pessoal privada (guarda-costas), abordando técnicas de proximidade, planejamento de deslocamento, segurança em eventos e postura profissional exigidas pelo mercado de alto padrão.",
+    syllabus: [
+      "Fundamentos da Segurança Pessoal",
+      "Técnicas de Proximidade e Formação em Equipe",
+      "Planejamento de Deslocamento e Antecipação de Riscos",
+      "Segurança em Eventos e Ambientes VIP",
+      "Etiqueta, Postura e Discrição Profissional",
+      "Defesa Pessoal Aplicada"
+    ],
+    certificate: "Certificado de especialização reconhecido pela Polícia Federal.",
+    lessons: 24,
+    prerequisite: "Curso de Formação de Vigilante concluído"
+  },
+  {
+    id: "instrutor-armamento",
+    name: "Instrutor de Armamento e Tiro",
+    category: "Especialização Avançada",
+    price: 2300.00,
+    duration: "160 horas/aula",
+    modality: "Presencial",
+    image: "https://images.unsplash.com/photo-1595590424283-b8f17842773f?auto=format&fit=crop&w=900&q=80",
+    summary: "Formação de instrutores habilitados a ministrar treinamentos de armamento e tiro em empresas de segurança e estandes.",
+    description: "Curso avançado destinado a vigilantes experientes que desejam se tornar instrutores de armamento e tiro. Aborda balística, didática de ensino, segurança em estandes de tiro e legislação sobre porte e uso de armas de fogo por vigilantes.",
+    syllabus: [
+      "Didática e Metodologia de Ensino",
+      "Balística e Manutenção de Armamento",
+      "Segurança em Estandes de Tiro",
+      "Legislação sobre Armas de Fogo",
+      "Avaliação de Desempenho de Alunos",
+      "Prática Supervisionada de Instrução"
+    ],
+    certificate: "Certificado de Instrutor reconhecido pela Polícia Federal.",
+    lessons: 40,
+    prerequisite: "Experiência mínima comprovada como vigilante"
+  },
+  {
+    id: "brigadista",
+    name: "Brigadista",
+    category: "Emergência",
+    price: 320.00,
+    duration: "16 horas/aula",
+    modality: "Presencial",
+    image: "https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?auto=format&fit=crop&w=900&q=80",
+    summary: "Capacite-se para atuar em brigadas de incêndio em empresas, condomínios e eventos, conforme normas técnicas de segurança contra incêndio.",
+    description: "Curso de formação de brigadista de incêndio conforme a norma técnica vigente, capacitando o aluno para prevenção, abandono de área e primeiro combate a princípios de incêndio, com prática de uso de extintores e simulações reais.",
+    syllabus: [
+      "Comportamento do Fogo e Prevenção",
+      "Uso de Extintores e Primeiro Combate",
+      "Procedimentos de Abandono de Área",
+      "Primeiros Socorros Básicos",
+      "Simulados Práticos de Emergência"
+    ],
+    certificate: "Certificado conforme Norma Técnica do Corpo de Bombeiros, com validade de 1 ano.",
+    lessons: 8
+  },
+  {
+    id: "bombeiro-civil",
+    name: "Bombeiro Civil",
+    category: "Emergência",
+    price: 2190.00,
+    duration: "300 horas/aula",
+    modality: "Presencial + EAD teórico",
+    image: "https://images.pexels.com/photos/16931606/pexels-photo-16931606.jpeg?auto=compress&cs=tinysrgb&w=900",
+    summary: "Formação completa para atuação profissional como Bombeiro Civil, com prática intensiva em combate a incêndio e resgate.",
+    description: "Curso completo de Bombeiro Civil, seguindo as normas do Corpo de Bombeiros, capacitando o profissional para prevenção e combate a incêndio, resgate, atendimento pré-hospitalar e produtos perigosos. Inclui aulas práticas intensivas em campo de treinamento com fogo real controlado.",
+    syllabus: [
+      "Legislação e Normas de Segurança Contra Incêndio",
+      "Combate a Incêndio Estrutural",
+      "Técnicas de Resgate e Salvamento",
+      "Atendimento Pré-Hospitalar (APH)",
+      "Produtos Perigosos",
+      "Prevenção e Inspeção de Segurança",
+      "Prática Intensiva em Campo de Treinamento"
+    ],
+    certificate: "Certificado reconhecido pelo Corpo de Bombeiros Militar, válido em território nacional.",
+    lessons: 60
+  },
+  {
+    id: "primeiros-socorros",
+    name: "Primeiros Socorros",
+    category: "Emergência",
+    price: 220.00,
+    duration: "16 horas/aula",
+    modality: "Presencial + EAD",
+    image: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=900&q=80",
+    summary: "Curso essencial para qualquer profissional: aprenda a agir corretamente diante de emergências e salvar vidas.",
+    description: "Curso prático e teórico de primeiros socorros, ideal para profissionais de segurança, empresas e o público em geral. Ensina reconhecimento de emergências, reanimação cardiopulmonar (RCP), controle de hemorragias, engasgos e imobilizações básicas.",
+    syllabus: [
+      "Avaliação da Cena e Sinais Vitais",
+      "Reanimação Cardiopulmonar (RCP) e DEA",
+      "Controle de Hemorragias e Ferimentos",
+      "Engasgos e Manobra de Heimlich",
+      "Imobilizações e Transporte de Vítimas",
+      "Emergências Clínicas Comuns"
+    ],
+    certificate: "Certificado de participação com carga horária reconhecida.",
+    lessons: 8
+  }
+];
+
+const TESTIMONIALS = [
+  { name: "Carlos Eduardo Souza", course: "Formação de Vigilante", text: "A didática dos instrutores fez toda a diferença. Consegui minha CNV e comecei a trabalhar em menos de um mês.", rating: 5, avatar: "https://i.pravatar.cc/120?img=12" },
+  { name: "Marina Alves Costa", course: "Segurança Pessoal Privada", text: "Curso extremamente completo e prático. A estrutura de aulas presenciais me deu confiança para atuar em eventos de grande porte.", rating: 5, avatar: "https://i.pravatar.cc/120?img=32" },
+  { name: "José Ribamar Ferreira", course: "Bombeiro Civil", text: "As aulas práticas com fogo real fizeram toda diferença. Hoje atuo em uma indústria e uso o que aprendi todos os dias.", rating: 5, avatar: "https://i.pravatar.cc/120?img=51" },
+  { name: "Ana Paula Nogueira", course: "Primeiros Socorros", text: "Recomendo para qualquer pessoa, não só profissionais de segurança. Aprendi a agir com calma numa emergência real da minha família.", rating: 5, avatar: "https://i.pravatar.cc/120?img=45" },
+  { name: "Roberto Lima Junior", course: "Instrutor de Armamento e Tiro", text: "Nível técnico impressionante. Hoje sou instrutor credenciado graças à estrutura e ao suporte da FORMAC.", rating: 5, avatar: "https://i.pravatar.cc/120?img=15" }
+];
+
+const FAQS = [
+  { q: "Os certificados da FORMAC são reconhecidos oficialmente?", a: "Sim. Todos os cursos de segurança privada seguem a grade curricular exigida pela Polícia Federal e os cursos de emergência seguem as normas técnicas do Corpo de Bombeiros. Os certificados emitidos são válidos em todo o território nacional." },
+  { q: "Como funciona o pagamento?", a: "No momento, os pagamentos são realizados exclusivamente via Pix, com confirmação e liberação de acesso automáticas assim que o pagamento é identificado. Em breve novos meios de pagamento serão disponibilizados." },
+  { q: "Posso parcelar o curso?", a: "Sim, oferecemos planos parcelados via Pix recorrente ou carnê, conforme detalhado na seção de Planos de Pagamento. Fale com nossa equipe pelo WhatsApp para simular o seu." },
+  { q: "Preciso ir presencialmente às aulas?", a: "A maioria dos cursos possui carga teórica em EAD e etapas práticas presenciais obrigatórias por lei (tiro, combate a incêndio, defesa pessoal). O conteúdo 100% teórico pode ser assistido a qualquer momento na área do aluno." },
+  { q: "Quanto tempo leva para receber o certificado?", a: "O certificado é emitido automaticamente pela plataforma assim que o aluno conclui 100% das aulas e é aprovado na avaliação final, ficando disponível para download imediato na área do aluno." },
+  { q: "A FORMAC segue a LGPD?", a: "Sim. Todos os dados pessoais e documentos enviados são armazenados com criptografia e utilizados exclusivamente para fins de matrícula, emissão de certificados e comunicação sobre o curso, conforme nossa Política de Privacidade." }
+];
+
+const PLANS = [
+  { name: "Pix à Vista", tag: "Mais econômico", desc: "Pague o valor integral do curso via Pix e garanta 5% de desconto automático em qualquer curso.", features: ["5% de desconto imediato", "Liberação de acesso em minutos", "Sem juros, sem burocracia"], highlight: false },
+  { name: "Pix Parcelado", tag: "Mais popular", desc: "Divida o investimento em até 12x via Pix recorrente, com liberação do curso já na primeira parcela.", features: ["Até 12x sem cartão de crédito", "Acesso liberado na 1ª parcela", "Lembretes automáticos de vencimento"], highlight: true },
+  { name: "Empresarial", tag: "Para equipes", desc: "Plano sob medida para empresas que precisam formar ou reciclar equipes inteiras de vigilantes e brigadistas.", features: ["Condições especiais por volume", "Painel de acompanhamento da equipe", "Emissão de certificados em lote"], highlight: false }
+];
+
+const STATS = [
+  { value: 18400, label: "Alunos formados", icon: "fa-user-graduate", suffix: "+" },
+  { value: 21700, label: "Certificados emitidos", icon: "fa-certificate", suffix: "+" },
+  { value: 9, label: "Cursos disponíveis", icon: "fa-book-open", suffix: "" },
+  { value: 97, label: "Taxa de aprovação", icon: "fa-chart-line", suffix: "%" }
+];
+
+// Login do admin agora é validado inteiramente no servidor (server.js),
+// contra um hash bcrypt guardado no .env — não existe mais nenhuma
+// credencial de admin visível no código do navegador.
+
+
+/* ============================================================
+   FORMAC FORMAÇÃO — APLICAÇÃO
+   Fala com o backend real (server.js) via fetch — autenticação por
+   cookie httpOnly, banco MongoDB, checkout Pix real via NexusPag.
+   ============================================================ */
+
+let CURRENT_USER = null;   // {email,name,cpf,phone,isAdmin,enrollments}
+let CURRENT_COURSE_FILTER = "Todos";
+let PENDING_ENROLL_COURSE = null;
+let currentPlayingCourse = null;
+
+/* ---------------- API HELPER ---------------- */
+async function api(path, options = {}){
+  const resp = await fetch(path, {
+    method: options.method || "GET",
+    headers: options.body ? { "Content-Type": "application/json" } : undefined,
+    credentials: "include", // envia/recebe o cookie de sessão
+    body: options.body ? JSON.stringify(options.body) : undefined
+  });
+  let data = null;
+  try{ data = await resp.json(); }catch(e){ /* resposta sem corpo (ex: 204) */ }
+  if(!resp.ok){
+    const err = new Error(data?.error || "Erro na requisição.");
+    err.status = resp.status;
+    throw err;
+  }
+  return data;
+}
+
+function toast(msg, type="success"){
+  const host = document.getElementById("toastHost");
+  const el = document.createElement("div");
+  el.className = "toast " + type;
+  el.innerHTML = `<i class="fa-solid ${type==='success'?'fa-circle-check':'fa-circle-exclamation'}"></i><span>${msg}</span>`;
+  host.appendChild(el);
+  setTimeout(()=>{ el.style.opacity="0"; el.style.transform="translateX(30px)"; setTimeout(()=>el.remove(),250); }, 3600);
+}
+
+function fmtBRL(v){ return v.toLocaleString('pt-BR',{style:'currency',currency:'BRL'}); }
+function initials(name){ return (name||"?").split(" ").filter(Boolean).slice(0,2).map(s=>s[0].toUpperCase()).join(""); }
+function uid(){ return Math.random().toString(36).slice(2,10) + Date.now().toString(36).slice(-4); }
+
+/* ---------------- NAV / MOBILE ---------------- */
+function toggleMobileNav(){ document.getElementById("mainNav").classList.toggle("open"); }
+function closeMobileNav(){ document.getElementById("mainNav").classList.remove("open"); }
+
+/* ================================================================
+   ROUTER
+   ================================================================ */
+function showPage(page, param){
+  window.scrollTo({top:0,behavior:"instant"});
+  const app = document.getElementById("app");
+  document.querySelector(".site-header").style.display = (page==='dashboard'||page==='admin') ? 'none' : 'flex';
+  document.querySelector(".site-footer").style.display = (page==='dashboard'||page==='admin') ? 'none' : 'block';
+
+  if(page==='landing') app.innerHTML = renderLanding();
+  else if(page==='course') { app.innerHTML = renderCourseDetail(param); }
+  else if(page==='privacidade') app.innerHTML = renderPrivacidade();
+  else if(page==='termos') app.innerHTML = renderTermos();
+  else if(page==='lgpd') app.innerHTML = renderLgpd();
+  else if(page==='sobre') app.innerHTML = renderSobre();
+  else if(page==='admin-login') app.innerHTML = renderAdminLogin();
+  else if(page==='dashboard') renderDashboard();
+  else if(page==='admin') renderAdmin();
+
+  if(page==='landing'){ initLandingBehaviors(); }
+  setupReveal();
+}
+
+/* ================================================================
+   LANDING PAGE
+   ================================================================ */
+function renderLanding(){
+  return `
+  ${renderHero()}
+  ${renderBenefits()}
+  ${renderStats()}
+  ${renderCourses()}
+  ${renderTestimonials()}
+  ${renderPlans()}
+  ${renderFaq()}
+  ${renderContact()}
+  `;
+}
+
+function renderHero(){
+  return `
+  <section class="hero" id="home">
+    <div class="wrap hero-grid">
+      <div class="reveal in">
+        <span class="hero-eyebrow"><i class="fa-solid fa-medal"></i> Formação reconhecida nacionalmente</span>
+        <h1>Sua carreira em <em>segurança e emergência</em> começa com quem forma profissionais de verdade.</h1>
+        <p class="hero-sub">Cursos homologados de Vigilante, Escolta Armada, Bombeiro Civil e mais — com certificação automática, aulas práticas e suporte da matrícula ao primeiro emprego.</p>
+        <div class="hero-actions">
+          <button class="btn btn-gold" onclick="scrollToId('cursos')">Comece Agora <i class="fa-solid fa-arrow-right"></i></button>
+          <button class="btn btn-outline-white" onclick="scrollToId('cursos')"><i class="fa-solid fa-play"></i> Ver cursos</button>
+        </div>
+        <div class="hero-trust">
+          <div><strong>18.400+</strong><span>Alunos formados</span></div>
+          <div><strong>9</strong><span>Cursos disponíveis</span></div>
+          <div><strong>97%</strong><span>Taxa de aprovação</span></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-badge-card">
+          <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=800&q=80" alt="Aluno em treinamento de segurança FORMAC">
+          <ul class="hero-mini-list">
+            <li><i class="fa-solid fa-circle-check"></i> Certificado reconhecido pela Polícia Federal</li>
+            <li><i class="fa-solid fa-circle-check"></i> Aulas práticas com instrutores credenciados</li>
+            <li><i class="fa-solid fa-circle-check"></i> Pagamento via Pix com liberação automática</li>
+          </ul>
+        </div>
+        <div class="seal"><span class="seal-num">A+</span><span class="seal-txt">Instituição<br>certificada</span></div>
+      </div>
+    </div>
+  </section>`;
+}
+
+function renderBenefits(){
+  const items = [
+    {icon:"fa-shield-halved", t:"Reconhecimento Oficial", d:"Cursos homologados pela Polícia Federal e Corpo de Bombeiros, válidos em todo o Brasil."},
+    {icon:"fa-user-tie", t:"Instrutores Especialistas", d:"Corpo docente formado por profissionais com experiência real de campo e em sala de aula."},
+    {icon:"fa-certificate", t:"Certificação Automática", d:"Ao concluir o curso e ser aprovado, seu certificado é emitido automaticamente na plataforma."},
+    {icon:"fa-headset", t:"Suporte Dedicado", d:"Equipe de apoio via WhatsApp para tirar dúvidas sobre matrícula, aulas e emissão de documentos."}
+  ];
+  return `
+  <section class="section" id="beneficios">
+    <div class="wrap">
+      <div class="section-head center reveal">
+        <div class="eyebrow" style="justify-content:center;">Por que escolher a FORMAC</div>
+        <h2>Formação que abre portas no mercado de trabalho</h2>
+        <p>Unimos credibilidade institucional, corpo docente qualificado e tecnologia para formar os melhores profissionais de segurança e emergência do país.</p>
+      </div>
+      <div class="benefits-grid">
+        ${items.map(b=>`
+          <div class="benefit-card reveal">
+            <div class="benefit-icon"><i class="fa-solid ${b.icon}"></i></div>
+            <h3>${b.t}</h3><p>${b.d}</p>
+          </div>`).join("")}
+      </div>
+    </div>
+  </section>`;
+}
+
+function renderStats(){
+  return `
+  <div class="wrap">
+    <div class="stats-bar reveal">
+      ${STATS.map(s=>`
+        <div class="stat-item">
+          <i class="fa-solid ${s.icon}"></i>
+          <div class="stat-num" data-target="${s.value}" data-suffix="${s.suffix}">0</div>
+          <div class="stat-label">${s.label}</div>
+        </div>`).join("")}
+    </div>
+  </div>`;
+}
+
+function renderCourses(){
+  const cats = ["Todos", ...new Set(COURSES.map(c=>c.category))];
+  return `
+  <section class="section" id="cursos" style="padding-top:120px;">
+    <div class="wrap">
+      <div class="section-head center reveal">
+        <div class="eyebrow" style="justify-content:center;">Catálogo de cursos</div>
+        <h2>Cursos profissionalizantes reconhecidos</h2>
+        <p>Formação completa e reciclagens para quem já atua ou deseja ingressar no setor de segurança privada e emergências.</p>
+      </div>
+      <div class="course-filters reveal">
+        ${cats.map(c=>`<button class="chip ${c==='Todos'?'active':''}" onclick="filterCourses('${c}',this)">${c}</button>`).join("")}
+      </div>
+      <div class="courses-grid" id="coursesGrid">
+        ${COURSES.map(renderCourseCard).join("")}
+      </div>
+    </div>
+  </section>`;
+}
+
+function renderCourseCard(c){
+  return `
+  <div class="course-card reveal" data-cat="${c.category}">
+    <div class="course-img-wrap">
+      <img src="${c.image}" alt="${c.name}" loading="lazy">
+      <span class="course-tag">${c.category}</span>
+    </div>
+    <div class="course-body">
+      <h3>${c.name}</h3>
+      <div class="course-meta">
+        <span><i class="fa-regular fa-clock"></i>${c.duration}</span>
+        <span><i class="fa-solid fa-video"></i>${c.lessons} aulas</span>
+      </div>
+      <p class="desc">${c.summary}</p>
+      <div class="course-footer">
+        <div class="course-price">
+          <small>Investimento</small>
+          <strong>${fmtBRL(c.price)}</strong>
+          <span class="pix-tag"><i class="fa-solid fa-bolt"></i> à vista no Pix</span>
+        </div>
+        <button class="btn btn-navy btn-sm" onclick="showPage('course','${c.id}')">Ver curso</button>
+      </div>
+    </div>
+  </div>`;
+}
+
+function filterCourses(cat, btn){
+  document.querySelectorAll(".chip").forEach(c=>c.classList.remove("active"));
+  btn.classList.add("active");
+  document.querySelectorAll("#coursesGrid .course-card").forEach(card=>{
+    card.style.display = (cat==="Todos" || card.dataset.cat===cat) ? "flex" : "none";
+  });
+}
+
+function renderTestimonials(){
+  return `
+  <section class="section section-alt" id="depoimentos">
+    <div class="wrap">
+      <div class="section-head center reveal">
+        <div class="eyebrow" style="justify-content:center;">Depoimentos</div>
+        <h2>Quem já se formou, recomenda</h2>
+        <p>Histórias reais de alunos que transformaram sua carreira com a FORMAC Formação.</p>
+      </div>
+      <div class="testi-track">
+        ${TESTIMONIALS.slice(0,3).map(t=>`
+          <div class="testi-card reveal">
+            <div class="testi-stars">${'<i class="fa-solid fa-star"></i>'.repeat(t.rating)}</div>
+            <p class="quote">"${t.text}"</p>
+            <div class="testi-person">
+              <img src="${t.avatar}" alt="${t.name}">
+              <div><strong>${t.name}</strong><span>${t.course}</span></div>
+            </div>
+          </div>`).join("")}
+      </div>
+    </div>
+  </section>`;
+}
+
+function renderPlans(){
+  return `
+  <section class="section" id="planos">
+    <div class="wrap">
+      <div class="section-head center reveal">
+        <div class="eyebrow" style="justify-content:center;">Planos de pagamento</div>
+        <h2>Pagamento simples, rápido e via Pix</h2>
+        <p>Escolha a forma de pagamento que melhor se encaixa no seu momento. Liberação de acesso automática.</p>
+      </div>
+      <div class="plans-grid">
+        ${PLANS.map(p=>`
+          <div class="plan-card ${p.highlight?'highlight':''} reveal">
+            <span class="plan-tag">${p.tag}</span>
+            <h3>${p.name}</h3>
+            <p class="plan-desc">${p.desc}</p>
+            <div class="plan-features">
+              ${p.features.map(f=>`<div><i class="fa-solid fa-circle-check"></i>${f}</div>`).join("")}
+            </div>
+            <button class="btn ${p.highlight?'btn-gold':'btn-ghost'} btn-block" onclick="scrollToId('cursos')">Escolher curso</button>
+          </div>`).join("")}
+      </div>
+    </div>
+  </section>`;
+}
+
+function renderFaq(){
+  return `
+  <section class="section section-alt" id="faq">
+    <div class="wrap">
+      <div class="section-head center reveal">
+        <div class="eyebrow" style="justify-content:center;">Dúvidas frequentes</div>
+        <h2>Perguntas Frequentes</h2>
+      </div>
+      <div class="faq-list reveal">
+        ${FAQS.map((f,i)=>`
+          <div class="faq-item" id="faq${i}">
+            <div class="faq-q" onclick="toggleFaq(${i})"><span>${f.q}</span><i class="fa-solid fa-plus"></i></div>
+            <div class="faq-a"><p>${f.a}</p></div>
+          </div>`).join("")}
+      </div>
+    </div>
+  </section>`;
+}
+function toggleFaq(i){ document.getElementById("faq"+i).classList.toggle("open"); }
+
+function renderContact(){
+  return `
+  <section class="section" id="contato">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">Fale conosco</div>
+        <h2>Ainda tem dúvidas? Fale com a gente</h2>
+        <p>Nossa equipe responde rapidamente pelo WhatsApp ou pelo formulário abaixo.</p>
+      </div>
+      <div class="contact-grid">
+        <form class="contact-form reveal" onsubmit="return handleContactForm(event)">
+          <label>Nome completo<input type="text" required placeholder="Digite seu nome"></label>
+          <label>E-mail<input type="email" required placeholder="seuemail@exemplo.com"></label>
+          <label>Assunto
+            <select required>
+              <option value="">Selecione um assunto</option>
+              <option>Dúvidas sobre matrícula</option>
+              <option>Suporte ao aluno</option>
+              <option>Parceria empresarial</option>
+              <option>Outro assunto</option>
+            </select>
+          </label>
+          <label>Mensagem<textarea rows="4" required placeholder="Como podemos ajudar?"></textarea></label>
+          <button class="btn btn-navy" type="submit"><i class="fa-solid fa-paper-plane"></i> Enviar mensagem</button>
+        </form>
+        <div class="contact-info-card reveal">
+          <div class="contact-info-row"><i class="fa-brands fa-whatsapp"></i><div><strong>WhatsApp</strong><span>+55 99 98127-3666 · resposta rápida</span></div></div>
+          <div class="contact-info-row"><i class="fa-regular fa-envelope"></i><div><strong>E-mail</strong><span>contato@formacformacao.com.br</span></div></div>
+          <div class="contact-info-row"><i class="fa-solid fa-location-dot"></i><div><strong>Unidade</strong><span>Imperatriz, Maranhão – Brasil</span></div></div>
+          <div class="contact-info-row"><i class="fa-regular fa-clock"></i><div><strong>Horário</strong><span>Seg. a sáb., 8h às 20h</span></div></div>
+          <div class="map-placeholder"><i class="fa-solid fa-map-location-dot" style="margin-right:8px;"></i> Mapa da unidade</div>
+        </div>
+      </div>
+    </div>
+  </section>`;
+}
+function handleContactForm(e){
+  e.preventDefault();
+  toast("Mensagem enviada! Nossa equipe entrará em contato em breve.");
+  e.target.reset();
+  return false;
+}
+
+function scrollToId(id){ document.getElementById(id)?.scrollIntoView({behavior:"smooth"}); }
+
+/* ---------------- Landing behaviors: reveal + counters ---------------- */
+function setupReveal(){
+  const els = document.querySelectorAll(".reveal:not(.in)");
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(en=>{ if(en.isIntersecting){ en.target.classList.add("in"); io.unobserve(en.target); } });
+  },{threshold:0.12});
+  els.forEach(el=>io.observe(el));
+}
+function initLandingBehaviors(){
+  const counters = document.querySelectorAll(".stat-num");
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(en=>{
+      if(en.isIntersecting){
+        animateCounter(en.target);
+        io.unobserve(en.target);
+      }
+    });
+  },{threshold:0.4});
+  counters.forEach(c=>io.observe(c));
+}
+function animateCounter(el){
+  const target = parseInt(el.dataset.target,10);
+  const suffix = el.dataset.suffix || "";
+  const dur = 1400; const start = performance.now();
+  function step(now){
+    const p = Math.min(1,(now-start)/dur);
+    const eased = 1 - Math.pow(1-p,3);
+    el.textContent = Math.round(eased*target).toLocaleString('pt-BR') + suffix;
+    if(p<1) requestAnimationFrame(step);
+  }
+  requestAnimationFrame(step);
+}
+
+/* ================================================================
+   COURSE DETAIL
+   ================================================================ */
+function renderCourseDetail(id){
+  const c = COURSES.find(x=>x.id===id);
+  if(!c) return `<div class="empty-state"><i class="fa-solid fa-circle-exclamation"></i><p>Curso não encontrado.</p></div>`;
+  return `
+  <section class="course-detail-hero">
+    <div class="wrap">
+      <div class="breadcrumb"><a href="#" onclick="showPage('landing');return false;">Início</a> / <a href="#" onclick="showPage('landing');scrollToId('cursos');return false;">Cursos</a> / ${c.name}</div>
+      <span class="hero-eyebrow"><i class="fa-solid fa-tag"></i> ${c.category}</span>
+      <h1 style="color:#fff;font-size:clamp(28px,3.6vw,44px);margin-top:16px;max-width:700px;">${c.name}</h1>
+      <p class="hero-sub" style="margin-top:14px;">${c.summary}</p>
+    </div>
+  </section>
+  <div class="wrap course-detail-grid">
+    <div class="reveal in">
+      <div class="detail-img"><img src="${c.image}" alt="${c.name}"></div>
+      <div style="margin-top:36px;">
+        <h3 style="font-size:22px;margin-bottom:14px;">Sobre o curso</h3>
+        <p style="color:var(--ink-soft);font-size:15.5px;line-height:1.8;">${c.description}</p>
+      </div>
+      <div style="margin-top:34px;">
+        <h3 style="font-size:22px;margin-bottom:16px;">Conteúdo programático</h3>
+        <div class="syllabus-list">
+          ${c.syllabus.map(s=>`<div><i class="fa-solid fa-circle-check"></i>${s}</div>`).join("")}
+        </div>
+      </div>
+      <div class="cert-callout"><i class="fa-solid fa-certificate" style="color:var(--gold-500);margin-right:8px;"></i>${c.certificate}</div>
+    </div>
+
+    <div class="detail-card reveal in">
+      <div class="price-big">${fmtBRL(c.price)}</div>
+      <div class="price-note">ou à vista no Pix com 5% de desconto</div>
+      <button class="btn btn-gold btn-block" onclick="startEnroll('${c.id}')"><i class="fa-solid fa-qrcode"></i> Finalizar Compra — Pagar com Pix</button>
+      <button class="btn btn-ghost btn-block" style="margin-top:10px;" onclick="window.open('https://wa.me/5599981273666?text=Olá! Tenho dúvidas sobre o curso ${encodeURIComponent(c.name)}','_blank')"><i class="fa-brands fa-whatsapp"></i> Tirar dúvidas no WhatsApp</button>
+      <div style="margin-top:22px;">
+        <div class="detail-info-row"><span>Carga horária</span><span>${c.duration}</span></div>
+        <div class="detail-info-row"><span>Modalidade</span><span>${c.modality}</span></div>
+        <div class="detail-info-row"><span>Aulas</span><span>${c.lessons} videoaulas</span></div>
+        ${c.prerequisite ? `<div class="detail-info-row"><span>Pré-requisito</span><span>${c.prerequisite}</span></div>` : ""}
+        <div class="detail-info-row"><span>Pagamento</span><span>Pix</span></div>
+      </div>
+    </div>
+  </div>
+  <div style="height:80px;"></div>
+  `;
+}
+
+/* ================================================================
+   AUTH
+   ================================================================ */
+function openAuth(tab){ switchAuthTab(tab); document.getElementById("authOverlay").classList.add("open"); }
+function closeAuth(){ document.getElementById("authOverlay").classList.remove("open"); }
+function switchAuthTab(tab){
+  document.getElementById("tabLogin").classList.toggle("active", tab==="login");
+  document.getElementById("tabRegister").classList.toggle("active", tab==="register");
+  document.getElementById("loginForm").classList.toggle("hidden", tab!=="login");
+  document.getElementById("registerForm").classList.toggle("hidden", tab!=="register");
+}
+
+async function handleRegister(e){
+  e.preventDefault();
+  const name = document.getElementById("regName").value.trim();
+  const cpf = document.getElementById("regCPF").value.trim();
+  const email = document.getElementById("regEmail").value.trim().toLowerCase();
+  const phone = document.getElementById("regPhone").value.trim();
+  const password = document.getElementById("regPassword").value;
+
+  try{
+    const { user } = await api("/api/auth/register", { method:"POST", body:{ name, cpf, email, phone, password } });
+    CURRENT_USER = user;
+    closeAuth();
+    toast("Conta criada com sucesso! Bem-vindo(a), "+name.split(" ")[0]+".");
+    renderAuthArea();
+    if(PENDING_ENROLL_COURSE){ openCheckout(PENDING_ENROLL_COURSE); PENDING_ENROLL_COURSE=null; }
+  }catch(err){
+    toast(err.message, "error");
+  }
+  return false;
+}
+
+async function handleLogin(e){
+  e.preventDefault();
+  const email = document.getElementById("loginEmail").value.trim().toLowerCase();
+  const password = document.getElementById("loginPassword").value;
+
+  try{
+    const { user } = await api("/api/auth/login", { method:"POST", body:{ email, password } });
+    CURRENT_USER = user;
+    closeAuth();
+    renderAuthArea();
+    if(user.isAdmin){
+      toast("Login administrativo realizado.");
+      showPage('admin');
+      return false;
+    }
+    toast("Login realizado com sucesso!");
+    if(PENDING_ENROLL_COURSE){ openCheckout(PENDING_ENROLL_COURSE); PENDING_ENROLL_COURSE=null; }
+  }catch(err){
+    toast(err.message, "error");
+  }
+  return false;
+}
+
+async function tryRestoreSession(){
+  try{
+    const { user } = await api("/api/auth/me");
+    CURRENT_USER = user;
+    renderAuthArea();
+  }catch(err){
+    // não logado — comportamento normal, sem toast de erro
+  }
+}
+
+async function logout(){
+  try{ await api("/api/auth/logout", { method:"POST" }); }catch(e){}
+  CURRENT_USER = null;
+  renderAuthArea();
+  showPage('landing');
+  toast("Sessão encerrada.");
+}
+
+function renderAuthArea(){
+  const area = document.getElementById("authArea");
+  if(!CURRENT_USER){
+    area.innerHTML = `<button class="btn btn-ghost" onclick="openAuth('login')">Entrar</button><button class="btn btn-gold" onclick="openAuth('register')">Cadastre-se</button>`;
+    return;
+  }
+  area.innerHTML = `
+    <div class="user-menu">
+      <div class="user-chip" onclick="document.getElementById('userDropdown').classList.toggle('open')">
+        <span class="avatar-fallback">${initials(CURRENT_USER.name)}</span>
+        <span>${CURRENT_USER.name.split(" ")[0]}</span>
+        <i class="fa-solid fa-chevron-down" style="font-size:11px;"></i>
+      </div>
+      <div class="user-dropdown" id="userDropdown">
+        ${CURRENT_USER.isAdmin ? `
+          <a href="#" onclick="showPage('admin');document.getElementById('userDropdown').classList.remove('open');return false;"><i class="fa-solid fa-gauge"></i> Painel Admin</a>
+        ` : `
+          <a href="#" onclick="showPage('dashboard');document.getElementById('userDropdown').classList.remove('open');return false;"><i class="fa-solid fa-gauge"></i> Área do aluno</a>
+        `}
+        <hr>
+        <button onclick="logout()"><i class="fa-solid fa-right-from-bracket"></i> Sair</button>
+      </div>
+    </div>`;
+}
+
+document.addEventListener("click", (e)=>{
+  const dd = document.getElementById("userDropdown");
+  if(dd && !e.target.closest(".user-menu")) dd.classList.remove("open");
+});
+
+/* ================================================================
+   CHECKOUT — INTEGRAÇÃO NEXUSPAG (PIX)
+   ================================================================
+   Como ligar isto à NexusPag de verdade:
+   1) A "secret key" da NexusPag NUNCA pode ficar no navegador. Ela deve
+      viver no seu backend (Node/PHP/Python/etc). O front-end (este
+      arquivo) só deve chamar a SUA API, nunca api.nexuspag.com direto.
+   2) Configure NEXUSPAG_CONFIG.backendBaseUrl abaixo com a URL do seu
+      backend e implemente as 2 rotas indicadas em NexusPagGateway.
+   3) O restante do fluxo (QR, copia-e-cola, contador, polling,
+      liberação de acesso, redirecionamento) já está pronto e não
+      precisa mudar.
+   ================================================================ */
+
+const NEXUSPAG_CONFIG = {
+  // URL do backend (mesmo servidor Node, então caminho relativo funciona
+  // tanto em localhost quanto já hospedado)
+  backendBaseUrl: "/api/checkout",
+  pixExpirationSeconds: 15 * 60, // 15 minutos, ajustável conforme sua conta NexusPag
+  pollingIntervalMs: 4000
+};
+
+/**
+ * Camada de integração com a NexusPag. Estas funções chamam o SEU backend
+ * (server.js), que fala com a NexusPag usando a secret key guardada no .env
+ * do servidor. A secret key nunca trafega até aqui no navegador.
+ */
+const NexusPagGateway = {
+  async createCharge({ courseId }){
+    const resp = await fetch(`${NEXUSPAG_CONFIG.backendBaseUrl}/create-charge`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      credentials: "include", // envia o cookie de sessão — o servidor identifica o aluno por aí
+      body: JSON.stringify({ courseId })
+    });
+    const data = await resp.json().catch(()=>null);
+    if(!resp.ok) throw new Error(data?.error || "Falha ao criar cobrança na NexusPag");
+    return data;
+    // Resposta do backend: { id, orderId, status:'pending', pix:{ qrcode, qrcode_base64 }, expires_at, amount }
+  },
+
+  async getChargeStatus(chargeId){
+    const resp = await fetch(`${NEXUSPAG_CONFIG.backendBaseUrl}/status/${chargeId}`, { credentials: "include" });
+    if(!resp.ok) throw new Error("Falha ao consultar status na NexusPag");
+    return await resp.json(); // { id, status: 'pending'|'paid'|'expired'|'refused' }
+    // O backend recebe também um WEBHOOK da NexusPag assim que o Pix é pago,
+    // e marca o pedido como pago no seu banco de dados — este polling é o
+    // mecanismo que o front-end usa para descobrir essa mudança de status.
+  }
+};
+
+/* ---------------- Checkout state ---------------- */
+let ACTIVE_ORDER = null;
+let checkoutPollTimer = null;
+let checkoutCountdownTimer = null;
+
+function startEnroll(courseId){
+  if(!CURRENT_USER || CURRENT_USER.isAdmin){
+    PENDING_ENROLL_COURSE = courseId;
+    toast("Crie sua conta ou entre para se matricular.", "error");
+    openAuth("register");
+    return;
+  }
+  const already = (CURRENT_USER.enrollments||[]).find(en=>en.courseId===courseId);
+  if(already){ toast("Você já está matriculado neste curso."); showPage('dashboard'); return; }
+  openCheckout(courseId);
+}
+
+/** Chamado pelos botões "Finalizar Compra" / "Pagar com Pix". */
+async function openCheckout(courseId){
+  const c = COURSES.find(x=>x.id===courseId);
+  document.getElementById("payOverlay").classList.add("open");
+  renderCheckoutLoading(c);
+
+  try{
+    // >>> Criação automática da cobrança na NexusPag ao abrir o checkout <<<
+    // O servidor confere o preço oficial, cria o pedido no banco e fala com
+    // a NexusPag — o front-end só recebe o resultado pronto.
+    const charge = await NexusPagGateway.createCharge({ courseId });
+
+    const order = {
+      id: charge.orderId,
+      courseId,
+      courseName: c.name,
+      amount: charge.amount,
+      chargeId: charge.id,
+      pixCode: charge.pix.qrcode,
+      qrImage: charge.pix.qrcode_base64 || null,
+      expiresAt: charge.expires_at,
+      status: "pending"
+    };
+    ACTIVE_ORDER = order;
+
+    renderCheckoutPending(order);
+    startStatusPolling(order);
+    startCountdown(order);
+  }catch(err){
+    console.error(err);
+    toast(err.message || "Não foi possível gerar a cobrança.", "error");
+    renderCheckoutError(c, courseId);
+  }
+}
+
+function renderCheckoutLoading(c){
+  document.getElementById("payModalContent").innerHTML = `
+    <button class="modal-close" onclick="closePayModal()"><i class="fa-solid fa-xmark"></i></button>
+    <div style="text-align:center;padding:50px 10px;">
+      <i class="fa-solid fa-circle-notch fa-spin" style="font-size:34px;color:var(--gold-500);"></i>
+      <h3 style="margin-top:20px;font-size:18px;">Gerando cobrança Pix na NexusPag...</h3>
+      <p style="color:var(--muted);font-size:13.5px;margin-top:6px;">Curso: ${c.name} · ${fmtBRL(c.price)}</p>
+    </div>`;
+}
+
+function renderCheckoutError(c, courseId){
+  document.getElementById("payModalContent").innerHTML = `
+    <button class="modal-close" onclick="closePayModal()"><i class="fa-solid fa-xmark"></i></button>
+    <div style="text-align:center;padding:40px 10px;">
+      <i class="fa-solid fa-triangle-exclamation" style="font-size:34px;color:var(--danger);"></i>
+      <h3 style="margin-top:18px;font-size:18px;">Não foi possível gerar a cobrança</h3>
+      <p style="color:var(--muted);font-size:13.5px;margin-top:6px;">Houve uma falha de comunicação com a NexusPag. Tente novamente.</p>
+      <button class="btn btn-gold" style="margin-top:22px;" onclick="openCheckout('${courseId}')"><i class="fa-solid fa-rotate-right"></i> Tentar novamente</button>
+    </div>`;
+}
+
+function renderCheckoutPending(order){
+  document.getElementById("payModalContent").innerHTML = `
+    <button class="modal-close" onclick="closePayModal()"><i class="fa-solid fa-xmark"></i></button>
+    <h3 style="font-size:22px;margin-bottom:4px;">Finalizar Compra — ${order.courseName}</h3>
+    <p style="color:var(--muted);font-size:13.5px;margin-bottom:18px;">Pedido ${order.id} · Cobrança NexusPag <code style="font-size:11.5px;">${order.chargeId}</code></p>
+
+    <div class="pay-summary"><span>Curso</span><span>${order.courseName}</span></div>
+    <div class="pay-summary total"><span>Valor a pagar</span><span>${fmtBRL(order.amount)}</span></div>
+
+    <div class="pix-box">
+      <div class="pix-qr">${renderPixQrImage(order)}</div>
+      <p style="font-size:13px;color:var(--ink-soft);margin-bottom:6px;">Escaneie o QR Code com o app do seu banco ou copie o código Pix abaixo</p>
+      <div class="pix-code">
+        <input type="text" readonly value="${order.pixCode}" id="pixCodeInput">
+        <button class="btn btn-navy btn-sm" onclick="copyPix()"><i class="fa-regular fa-copy"></i> Copiar</button>
+      </div>
+      <div style="margin-top:16px;display:flex;align-items:center;justify-content:center;gap:8px;color:var(--ink-soft);font-size:13.5px;">
+        <i class="fa-regular fa-clock"></i> Este Pix expira em <strong id="checkoutCountdown" style="color:var(--navy-900);">15:00</strong>
+      </div>
+    </div>
+
+    <div class="pay-steps">
+      <div><span>1</span> Abra o app do seu banco e escolha pagar via Pix Copia e Cola.</div>
+      <div><span>2</span> Cole o código acima e confirme o pagamento de ${fmtBRL(order.amount)}.</div>
+      <div><span>3</span> A verificação é automática — assim que a NexusPag confirmar, seu acesso é liberado.</div>
+    </div>
+
+    <div style="display:flex;align-items:center;justify-content:center;gap:8px;margin-top:20px;color:var(--muted);font-size:13px;">
+      <i class="fa-solid fa-circle-notch fa-spin"></i> Aguardando confirmação do pagamento...
+    </div>
+  `;
+}
+
+function startCountdown(order){
+  clearInterval(checkoutCountdownTimer);
+  function tick(){
+    const remainingMs = new Date(order.expiresAt).getTime() - Date.now();
+    const el = document.getElementById("checkoutCountdown");
+    if(remainingMs <= 0){
+      clearInterval(checkoutCountdownTimer);
+      if(order.status === "pending") handleChargeExpired(order);
+      return;
+    }
+    if(el){
+      const m = Math.floor(remainingMs/60000);
+      const s = Math.floor((remainingMs%60000)/1000);
+      el.textContent = `${String(m).padStart(2,"0")}:${String(s).padStart(2,"0")}`;
+    }
+  }
+  tick();
+  checkoutCountdownTimer = setInterval(tick, 1000);
+}
+
+function startStatusPolling(order){
+  clearInterval(checkoutPollTimer);
+  checkoutPollTimer = setInterval(async ()=>{
+    if(!ACTIVE_ORDER || ACTIVE_ORDER.id !== order.id) { clearInterval(checkoutPollTimer); return; }
+    try{
+      const result = await NexusPagGateway.getChargeStatus(order.chargeId);
+      if(result.status === "paid") await handleChargeApproved(order);
+      else if(result.status === "expired") await handleChargeExpired(order);
+      else if(result.status === "refused") await handleChargeRefused(order);
+    }catch(err){ console.error("Erro ao consultar status NexusPag:", err); }
+  }, NEXUSPAG_CONFIG.pollingIntervalMs);
+}
+
+function stopCheckoutTimers(){
+  clearInterval(checkoutPollTimer);
+  clearInterval(checkoutCountdownTimer);
+}
+
+/** Pagamento aprovado: o backend já liberou o curso via webhook — aqui só
+ *  buscamos os dados atualizados do aluno e mostramos a confirmação. */
+async function handleChargeApproved(order){
+  if(order.status !== "pending") return;
+  stopCheckoutTimers();
+  order.status = "paid";
+
+  try{
+    const { user } = await api("/api/auth/me");
+    CURRENT_USER = user;
+  }catch(err){ console.error("Erro ao atualizar dados do aluno:", err); }
+
+  document.getElementById("payModalContent").innerHTML = `
+    <div style="text-align:center;padding:44px 10px;">
+      <i class="fa-solid fa-circle-check" style="font-size:44px;color:var(--success);"></i>
+      <h3 style="margin-top:18px;font-size:20px;">Pagamento aprovado!</h3>
+      <p style="color:var(--ink-soft);font-size:14px;margin-top:8px;">Sua matrícula em <strong>${order.courseName}</strong> foi confirmada. Redirecionando para a área do aluno...</p>
+      <button class="btn btn-gold" style="margin-top:24px;" onclick="closePayModal();showPage('dashboard');">Ir para área do aluno agora</button>
+    </div>`;
+  toast("Pagamento confirmado pela NexusPag! Acesso liberado.");
+  setTimeout(()=>{ closePayModal(); showPage('dashboard'); }, 2600);
+}
+
+async function handleChargeExpired(order){
+  if(order.status !== "pending") return;
+  stopCheckoutTimers();
+  order.status = "expired";
+  document.getElementById("payModalContent").innerHTML = `
+    <button class="modal-close" onclick="closePayModal()"><i class="fa-solid fa-xmark"></i></button>
+    <div style="text-align:center;padding:40px 10px;">
+      <i class="fa-solid fa-clock" style="font-size:34px;color:var(--muted);"></i>
+      <h3 style="margin-top:18px;font-size:19px;">Pix expirado</h3>
+      <p style="color:var(--ink-soft);font-size:14px;margin-top:8px;">O tempo para pagamento deste Pix (${fmtBRL(order.amount)}) esgotou e a cobrança foi cancelada automaticamente.</p>
+      <button class="btn btn-gold" style="margin-top:22px;" onclick="openCheckout('${order.courseId}')"><i class="fa-solid fa-rotate-right"></i> Gerar novo Pix</button>
+    </div>`;
+}
+
+async function handleChargeRefused(order){
+  if(order.status !== "pending") return;
+  stopCheckoutTimers();
+  order.status = "refused";
+  document.getElementById("payModalContent").innerHTML = `
+    <button class="modal-close" onclick="closePayModal()"><i class="fa-solid fa-xmark"></i></button>
+    <div style="text-align:center;padding:40px 10px;">
+      <i class="fa-solid fa-circle-xmark" style="font-size:34px;color:var(--danger);"></i>
+      <h3 style="margin-top:18px;font-size:19px;">Pagamento recusado</h3>
+      <p style="color:var(--ink-soft);font-size:14px;margin-top:8px;">A NexusPag não conseguiu confirmar este pagamento de ${fmtBRL(order.amount)}. Isso pode acontecer por instabilidade bancária momentânea — tente gerar um novo Pix.</p>
+      <button class="btn btn-gold" style="margin-top:22px;" onclick="openCheckout('${order.courseId}')"><i class="fa-solid fa-rotate-right"></i> Gerar novo Pix</button>
+    </div>`;
+}
+
+function closePayModal(){
+  document.getElementById("payOverlay").classList.remove("open");
+  stopCheckoutTimers();
+  ACTIVE_ORDER = null;
+}
+function copyPix(){
+  const input = document.getElementById("pixCodeInput");
+  input.select(); document.execCommand && document.execCommand("copy");
+  navigator.clipboard?.writeText(input.value).catch(()=>{});
+  toast("Código Pix copiado!");
+}
+function renderPixQrImage(order){
+  // 1) Se a NexusPag devolveu uma imagem pronta do QR (base64), usa ela.
+  if(order.qrImage){
+    const src = order.qrImage.startsWith("data:") ? order.qrImage : `data:image/png;base64,${order.qrImage}`;
+    return `<img src="${src}" alt="QR Code Pix" style="width:100%;height:100%;object-fit:contain;">`;
+  }
+  // 2) Caso contrário, gera um QR real e escaneável a partir do próprio
+  //    código Pix "Copia e Cola" (o que importa para o banco é o conteúdo
+  //    codificado, não quem gerou a imagem do QR).
+  const encoded = encodeURIComponent(order.pixCode);
+  return `<img src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&margin=0&data=${encoded}" alt="QR Code Pix" style="width:100%;height:100%;object-fit:contain;">`;
+}
+
+/* ================================================================
+   STUDENT DASHBOARD (Área do Aluno)
+   ================================================================ */
+let dashTab = "cursos";
+function renderDashboard(){
+  if(!CURRENT_USER || CURRENT_USER.isAdmin){ showPage('landing'); openAuth('login'); return; }
+  const app = document.getElementById("app");
+  app.innerHTML = `
+  <div class="dash-shell">
+    <aside class="dash-sidebar">
+      <div class="dash-profile">
+        <span class="avatar-fallback">${initials(CURRENT_USER.name)}</span>
+        <div><strong>${CURRENT_USER.name}</strong><span>${CURRENT_USER.email}</span></div>
+      </div>
+      <nav class="dash-nav">
+        <button data-tab="cursos" onclick="setDashTab('cursos')"><i class="fa-solid fa-book-open"></i> Meus cursos</button>
+        <button data-tab="certificados" onclick="setDashTab('certificados')"><i class="fa-solid fa-certificate"></i> Certificados</button>
+        <button data-tab="materiais" onclick="setDashTab('materiais')"><i class="fa-solid fa-file-arrow-down"></i> Materiais</button>
+        <button data-tab="avaliacoes" onclick="setDashTab('avaliacoes')"><i class="fa-solid fa-star"></i> Avaliações</button>
+        <button data-tab="perfil" onclick="setDashTab('perfil')"><i class="fa-solid fa-user"></i> Meu perfil</button>
+        <button onclick="showPage('landing')"><i class="fa-solid fa-house"></i> Voltar ao site</button>
+        <button onclick="logout()"><i class="fa-solid fa-right-from-bracket"></i> Sair</button>
+      </nav>
+    </aside>
+    <div class="dash-main" id="dashMain"></div>
+  </div>`;
+  setDashTab(dashTab);
+}
+function setDashTab(tab){
+  dashTab = tab;
+  document.querySelectorAll(".dash-nav button[data-tab]").forEach(b=>b.classList.toggle("active", b.dataset.tab===tab));
+  const main = document.getElementById("dashMain");
+  if(tab==="cursos") main.innerHTML = renderDashCourses();
+  if(tab==="certificados") main.innerHTML = renderDashCertificates();
+  if(tab==="materiais") main.innerHTML = renderDashMaterials();
+  if(tab==="avaliacoes") main.innerHTML = renderDashReviews();
+  if(tab==="perfil") main.innerHTML = renderDashProfile();
+}
+
+function courseProgressPct(en){
+  const c = COURSES.find(x=>x.id===en.courseId);
+  const total = c.lessons;
+  const done = Object.values(en.progress||{}).filter(Boolean).length;
+  return Math.round((done/total)*100);
+}
+
+function renderDashCourses(){
+  const enrollments = CURRENT_USER.enrollments || [];
+  const totalCerts = enrollments.filter(e=>e.certificateIssued).length;
+  const avgProgress = enrollments.length ? Math.round(enrollments.reduce((a,e)=>a+courseProgressPct(e),0)/enrollments.length) : 0;
+
+  return `
+    <div class="dash-header"><h2>Meus cursos</h2></div>
+    <div class="kpi-row">
+      <div class="kpi-card"><i class="fa-solid fa-book"></i><div class="kpi-num">${enrollments.length}</div><div class="kpi-label">Cursos matriculados</div></div>
+      <div class="kpi-card"><i class="fa-solid fa-chart-line"></i><div class="kpi-num">${avgProgress}%</div><div class="kpi-label">Progresso médio</div></div>
+      <div class="kpi-card"><i class="fa-solid fa-certificate"></i><div class="kpi-num">${totalCerts}</div><div class="kpi-label">Certificados emitidos</div></div>
+      <div class="kpi-card"><i class="fa-solid fa-fire"></i><div class="kpi-num">${enrollments.filter(e=>!e.completed).length}</div><div class="kpi-label">Em andamento</div></div>
+    </div>
+    ${enrollments.length===0 ? `
+      <div class="empty-state"><i class="fa-solid fa-book-open"></i><p>Você ainda não está matriculado em nenhum curso.</p>
+      <button class="btn btn-gold" style="margin-top:14px;" onclick="showPage('landing');setTimeout(()=>scrollToId('cursos'),100);">Ver catálogo de cursos</button></div>
+    ` : enrollments.map(en=>{
+      const c = COURSES.find(x=>x.id===en.courseId);
+      const pct = courseProgressPct(en);
+      return `
+      <div class="my-course-card">
+        <img src="${c.image}" alt="${c.name}">
+        <div class="my-course-info">
+          <h4>${c.name}</h4>
+          <div class="progress-bar"><div class="progress-fill" style="width:${pct}%;"></div></div>
+          <div class="progress-label">${pct}% concluído · ${Object.values(en.progress||{}).filter(Boolean).length}/${c.lessons} aulas</div>
+        </div>
+        <div class="my-course-actions">
+          <button class="btn btn-navy btn-sm" onclick="openPlayer('${en.id}')"><i class="fa-solid fa-play"></i> Assistir aulas</button>
+          ${en.certificateIssued ? `<button class="btn btn-gold btn-sm" onclick="openCertificate('${en.id}')"><i class="fa-solid fa-certificate"></i> Ver certificado</button>` : `<button class="btn btn-ghost btn-sm" disabled>Conclua para certificar</button>`}
+        </div>
+      </div>`;
+    }).join("")}
+
+    <div id="playerArea"></div>
+  `;
+}
+
+function openPlayer(enrollmentId){
+  const en = CURRENT_USER.enrollments.find(e=>e.id===enrollmentId);
+  const c = COURSES.find(x=>x.id===en.courseId);
+  currentPlayingCourse = enrollmentId;
+  const area = document.getElementById("playerArea") || (()=>{ const d=document.createElement("div"); d.id="playerArea"; document.getElementById("dashMain").appendChild(d); return d; })();
+  area.innerHTML = `
+    <div style="margin-top:36px;">
+      <h3 style="font-size:20px;margin-bottom:16px;">${c.name} — aulas</h3>
+      <div class="player-shell">
+        <video controls poster="${c.image}" id="lessonVideo">
+          <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="lesson-list">
+        ${Array.from({length:c.lessons}).map((_,i)=>{
+          const done = !!(en.progress && en.progress[i]);
+          return `
+          <div class="lesson-row ${done?'done':''}" onclick="toggleLesson('${enrollmentId}',${i})">
+            <div class="lesson-check"><i class="fa-solid fa-check"></i></div>
+            <div class="lesson-title">Aula ${i+1} — ${c.syllabus[i % c.syllabus.length]}</div>
+            <div class="lesson-dur">${8 + (i%5)*3} min</div>
+          </div>`;
+        }).join("")}
+      </div>
+    </div>
+  `;
+  area.scrollIntoView({behavior:"smooth", block:"start"});
+}
+
+async function toggleLesson(enrollmentId, idx){
+  const wasCompleted = CURRENT_USER.enrollments.find(e=>e.id===enrollmentId)?.completed;
+  try{
+    const { user } = await api(`/api/enrollments/${enrollmentId}/toggle-lesson`, { method:"POST", body:{ lessonIndex: idx } });
+    CURRENT_USER = user;
+    const en = CURRENT_USER.enrollments.find(e=>e.id===enrollmentId);
+    if(en?.completed && !wasCompleted){
+      toast("🎉 Curso concluído! Certificado emitido automaticamente.");
+    }
+  }catch(err){
+    toast(err.message || "Não foi possível atualizar o progresso.", "error");
+  }
+  setDashTab("cursos");
+  setTimeout(()=>openPlayer(enrollmentId), 50);
+}
+
+function renderDashCertificates(){
+  const certs = (CURRENT_USER.enrollments||[]).filter(e=>e.certificateIssued);
+  return `
+  <div class="dash-header"><h2>Meus certificados</h2></div>
+  ${certs.length===0 ? `<div class="empty-state"><i class="fa-solid fa-certificate"></i><p>Nenhum certificado emitido ainda. Conclua um curso para gerar o seu.</p></div>` :
+    certs.map(en=>{
+      const c = COURSES.find(x=>x.id===en.courseId);
+      return `
+      <div class="my-course-card">
+        <img src="${c.image}" alt="${c.name}">
+        <div class="my-course-info">
+          <h4>${c.name}</h4>
+          <div class="progress-label">Emitido em ${new Date(en.completedAt).toLocaleDateString('pt-BR')} · Código ${en.certificateCode}</div>
+        </div>
+        <div class="my-course-actions">
+          <button class="btn btn-gold btn-sm" onclick="openCertificate('${en.id}')"><i class="fa-solid fa-download"></i> Baixar certificado</button>
+        </div>
+      </div>`;
+    }).join("")
+  }`;
+}
+
+function openCertificate(enrollmentId){
+  const en = CURRENT_USER.enrollments.find(e=>e.id===enrollmentId);
+  const c = COURSES.find(x=>x.id===en.courseId);
+  document.getElementById("certModalContent").innerHTML = `
+    <button class="modal-close" onclick="document.getElementById('certOverlay').classList.remove('open')"><i class="fa-solid fa-xmark"></i></button>
+    <div id="certCanvasWrap" style="border:10px solid #0b1a33;padding:6px;border-radius:6px;">
+      <canvas id="certCanvas" width="1000" height="700" style="width:100%;display:block;border-radius:2px;"></canvas>
+    </div>
+    <button class="btn btn-gold btn-block" style="margin-top:20px;" onclick="downloadCertificate()"><i class="fa-solid fa-download"></i> Baixar em PNG</button>
+    <p style="text-align:center;font-size:12px;color:var(--muted);margin-top:8px;">Código de autenticação: <strong>${en.certificateCode}</strong></p>
+  `;
+  document.getElementById("certOverlay").classList.add("open");
+  setTimeout(()=>drawCertificate(en, c), 30);
+}
+
+function drawCertificate(en, c){
+  const cv = document.getElementById("certCanvas");
+  const ctx = cv.getContext("2d");
+  ctx.fillStyle = "#ffffff"; ctx.fillRect(0,0,1000,700);
+  ctx.strokeStyle = "#c79a2b"; ctx.lineWidth = 6; ctx.strokeRect(24,24,952,652);
+  ctx.strokeStyle = "#0b1a33"; ctx.lineWidth = 2; ctx.strokeRect(40,40,920,620);
+
+  ctx.textAlign = "center";
+  ctx.fillStyle = "#0b1a33"; ctx.font = "700 26px Georgia";
+  ctx.fillText("FORMAC FORMAÇÃO", 500, 120);
+  ctx.fillStyle = "#c79a2b"; ctx.font = "italic 16px Georgia";
+  ctx.fillText("Instituição de Formação Profissional", 500, 148);
+
+  ctx.fillStyle = "#8792a8"; ctx.font = "16px Georgia";
+  ctx.fillText("CERTIFICADO DE CONCLUSÃO", 500, 210);
+
+  ctx.fillStyle = "#0b1a33"; ctx.font = "italic 20px Georgia";
+  ctx.fillText("Certificamos que", 500, 270);
+
+  ctx.font = "700 40px Georgia";
+  ctx.fillText(en.studentName || CURRENT_USER.name, 500, 325);
+
+  ctx.font = "20px Georgia";
+  ctx.fillText("concluiu com aproveitamento o curso de", 500, 370);
+
+  ctx.fillStyle = "#c79a2b"; ctx.font = "700 30px Georgia";
+  ctx.fillText(c.name, 500, 420);
+
+  ctx.fillStyle = "#425274"; ctx.font = "17px Georgia";
+  ctx.fillText(`Carga horária: ${c.duration}`, 500, 460);
+
+  ctx.fillStyle = "#8792a8"; ctx.font = "14px Georgia";
+  ctx.fillText(`Emitido em ${new Date(en.completedAt||Date.now()).toLocaleDateString('pt-BR')} — Código de autenticação ${en.certificateCode}`, 500, 560);
+
+  ctx.strokeStyle = "#e2e6ee"; ctx.beginPath(); ctx.moveTo(320,610); ctx.lineTo(680,610); ctx.stroke();
+  ctx.fillStyle = "#0b1a33"; ctx.font = "15px Georgia";
+  ctx.fillText("Direção Pedagógica — FORMAC Formação", 500, 632);
+}
+function downloadCertificate(){
+  const cv = document.getElementById("certCanvas");
+  const link = document.createElement("a");
+  link.download = "certificado-formac.png";
+  link.href = cv.toDataURL("image/png");
+  link.click();
+}
+
+function renderDashMaterials(){
+  const enrollments = CURRENT_USER.enrollments || [];
+  if(enrollments.length===0) return `<div class="dash-header"><h2>Materiais</h2></div><div class="empty-state"><i class="fa-solid fa-file-arrow-down"></i><p>Matricule-se em um curso para acessar os materiais.</p></div>`;
+  return `
+  <div class="dash-header"><h2>Materiais para download</h2></div>
+  ${enrollments.map(en=>{
+    const c = COURSES.find(x=>x.id===en.courseId);
+    return `
+    <h4 style="margin:22px 0 10px;font-size:15px;color:var(--ink-soft);">${c.name}</h4>
+    <div class="material-row"><span><i class="fa-solid fa-file-pdf"></i>Apostila completa — ${c.name}.pdf</span><button class="btn btn-ghost btn-sm" onclick="toast('Download iniciado (demonstração).')"><i class="fa-solid fa-download"></i></button></div>
+    <div class="material-row"><span><i class="fa-solid fa-file-pdf"></i>Slides das aulas.pdf</span><button class="btn btn-ghost btn-sm" onclick="toast('Download iniciado (demonstração).')"><i class="fa-solid fa-download"></i></button></div>
+    <div class="material-row"><span><i class="fa-solid fa-file-lines"></i>Legislação aplicável.pdf</span><button class="btn btn-ghost btn-sm" onclick="toast('Download iniciado (demonstração).')"><i class="fa-solid fa-download"></i></button></div>
+    `;
+  }).join("")}
+  `;
+}
+
+let selectedRating = 5;
+function renderDashReviews(){
+  const enrollments = (CURRENT_USER.enrollments||[]);
+  if(enrollments.length===0) return `<div class="dash-header"><h2>Avaliações</h2></div><div class="empty-state"><i class="fa-solid fa-star"></i><p>Matricule-se em um curso para poder avaliá-lo.</p></div>`;
+  return `
+  <div class="dash-header"><h2>Avalie seus cursos</h2></div>
+  ${enrollments.map(en=>{
+    const c = COURSES.find(x=>x.id===en.courseId);
+    if(en.rating){
+      return `<div class="my-course-card"><img src="${c.image}"><div class="my-course-info"><h4>${c.name}</h4><div class="testi-stars">${'<i class="fa-solid fa-star"></i>'.repeat(en.rating)}</div><p style="color:var(--ink-soft);font-size:13.5px;margin-top:6px;">"${en.reviewText||''}"</p></div></div>`;
+    }
+    return `
+    <div class="my-course-card" style="align-items:flex-start;">
+      <img src="${c.image}">
+      <div class="my-course-info">
+        <h4>${c.name}</h4>
+        <div class="rating-stars" id="stars-${en.id}">
+          ${[1,2,3,4,5].map(n=>`<i class="fa-solid fa-star" data-n="${n}" onclick="setRating('${en.id}',${n})"></i>`).join("")}
+        </div>
+        <textarea id="review-${en.id}" rows="2" placeholder="Conte como foi sua experiência..." style="width:100%;margin-top:10px;padding:10px;border-radius:8px;border:1.5px solid var(--line);font-family:inherit;"></textarea>
+        <button class="btn btn-navy btn-sm" style="margin-top:8px;" onclick="submitReview('${en.id}')">Enviar avaliação</button>
+      </div>
+    </div>`;
+  }).join("")}
+  `;
+}
+function setRating(enId, n){
+  document.querySelectorAll(`#stars-${enId} i`).forEach(i=> i.classList.toggle("active", parseInt(i.dataset.n)<=n));
+  document.getElementById(`stars-${enId}`).dataset.rating = n;
+}
+async function submitReview(enId){
+  const rating = parseInt(document.getElementById(`stars-${enId}`).dataset.rating || "0");
+  if(!rating){ toast("Selecione uma nota de 1 a 5 estrelas.", "error"); return; }
+  const text = document.getElementById(`review-${enId}`).value.trim();
+  try{
+    const { user } = await api(`/api/enrollments/${enId}/review`, { method:"POST", body:{ rating, text } });
+    CURRENT_USER = user;
+    toast("Avaliação enviada. Obrigado pelo feedback!");
+    setDashTab("avaliacoes");
+  }catch(err){
+    toast(err.message || "Não foi possível enviar a avaliação.", "error");
+  }
+}
+
+function renderDashProfile(){
+  return `
+  <div class="dash-header"><h2>Meu perfil</h2></div>
+  <div class="detail-card" style="max-width:480px;position:static;">
+    <label style="font-size:13px;font-weight:600;">Nome completo</label>
+    <input value="${CURRENT_USER.name}" style="width:100%;padding:11px;border-radius:8px;border:1.5px solid var(--line);margin:6px 0 16px;" disabled>
+    <label style="font-size:13px;font-weight:600;">E-mail</label>
+    <input value="${CURRENT_USER.email}" style="width:100%;padding:11px;border-radius:8px;border:1.5px solid var(--line);margin:6px 0 16px;" disabled>
+    <label style="font-size:13px;font-weight:600;">CPF</label>
+    <input value="${CURRENT_USER.cpf||'—'}" style="width:100%;padding:11px;border-radius:8px;border:1.5px solid var(--line);margin:6px 0 16px;" disabled>
+    <label style="font-size:13px;font-weight:600;">WhatsApp</label>
+    <input value="${CURRENT_USER.phone||'—'}" style="width:100%;padding:11px;border-radius:8px;border:1.5px solid var(--line);margin:6px 0 16px;" disabled>
+    <p style="font-size:12px;color:var(--muted);">Seus dados são protegidos conforme a LGPD. Para alterar informações cadastrais, entre em contato com o suporte.</p>
+  </div>`;
+}
+
+/* ================================================================
+   ADMIN LOGIN + PANEL
+   ================================================================ */
+function renderAdminLogin(){
+  return `
+  <div style="min-height:80vh;display:flex;align-items:center;justify-content:center;background:var(--navy-950);">
+    <div class="modal" style="position:static;max-width:400px;">
+      <div style="text-align:center;margin-bottom:20px;">
+        <span class="brand-mark" style="margin:0 auto 14px;"><i class="fa-solid fa-shield-halved"></i></span>
+        <h3 style="font-size:20px;">Painel Administrativo</h3>
+        <p style="font-size:13px;color:var(--muted);">Acesso restrito à equipe FORMAC</p>
+      </div>
+      <form class="auth-form" onsubmit="return handleLogin(event)">
+        <label>E-mail<input type="email" id="loginEmail" required placeholder="seu-email@formacformacao.com.br"></label>
+        <label>Senha<input type="password" id="loginPassword" required placeholder="Sua senha de administrador"></label>
+        <button class="btn btn-navy btn-block" type="submit">Acessar painel</button>
+      </form>
+      <p style="text-align:center;font-size:12px;color:var(--muted);margin-top:14px;">Acesso restrito à equipe FORMAC.</p>
+    </div>
+  </div>`;
+}
+
+let adminTab = "resumo";
+async function renderAdmin(){
+  if(!CURRENT_USER || !CURRENT_USER.isAdmin){ showPage('admin-login'); return; }
+  const app = document.getElementById("app");
+  app.innerHTML = `
+  <div class="admin-shell">
+    <aside class="dash-sidebar">
+      <div class="brand" style="margin-bottom:30px;"><span class="brand-mark"><i class="fa-solid fa-shield-halved"></i></span><span class="brand-text light">FORMAC <em>Admin</em></span></div>
+      <nav class="dash-nav">
+        <button data-atab="resumo" onclick="setAdminTab('resumo')"><i class="fa-solid fa-gauge"></i> Visão geral</button>
+        <button data-atab="alunos" onclick="setAdminTab('alunos')"><i class="fa-solid fa-users"></i> Alunos</button>
+        <button data-atab="cursos" onclick="setAdminTab('cursos')"><i class="fa-solid fa-book"></i> Cursos</button>
+        <button data-atab="pagamentos" onclick="setAdminTab('pagamentos')"><i class="fa-solid fa-money-bill-wave"></i> Pagamentos</button>
+        <button data-atab="certificados" onclick="setAdminTab('certificados')"><i class="fa-solid fa-certificate"></i> Certificados</button>
+        <button onclick="showPage('landing')"><i class="fa-solid fa-house"></i> Ver site</button>
+        <button onclick="logout()"><i class="fa-solid fa-right-from-bracket"></i> Sair</button>
+      </nav>
+    </aside>
+    <div class="dash-main" id="adminMain">Carregando dados...</div>
+  </div>`;
+  setAdminTab(adminTab);
+}
+function setAdminTab(tab){
+  adminTab = tab;
+  document.querySelectorAll(".dash-nav button[data-atab]").forEach(b=>b.classList.toggle("active", b.dataset.atab===tab));
+  renderAdminTabContent(tab);
+}
+
+async function loadAllUsers(){
+  try{ const { students } = await api("/api/admin/students"); return students; }
+  catch(err){ toast(err.message, "error"); return []; }
+}
+async function loadAllPayments(){
+  try{ const { orders } = await api("/api/admin/orders"); return orders; }
+  catch(err){ toast(err.message, "error"); return []; }
+}
+async function loadAllCertificates(){
+  try{ const { certificates } = await api("/api/admin/certificates"); return certificates; }
+  catch(err){ toast(err.message, "error"); return []; }
+}
+
+async function renderAdminTabContent(tab){
+  const main = document.getElementById("adminMain");
+  main.innerHTML = `<div class="empty-state"><i class="fa-solid fa-spinner fa-spin"></i><p>Carregando...</p></div>`;
+  const users = await loadAllUsers();
+  const payments = await loadAllPayments();
+  const certs = await loadAllCertificates();
+  const totalRevenue = payments.filter(p=>p.status==="paid").reduce((a,p)=>a+p.amount,0);
+  const totalEnrollments = users.reduce((a,u)=>a+(u.enrollments?.length||0),0);
+
+  if(tab==="resumo"){
+    main.innerHTML = `
+    <div class="dash-header"><h2>Visão geral</h2></div>
+    <div class="kpi-row">
+      <div class="kpi-card"><i class="fa-solid fa-users"></i><div class="kpi-num">${users.length}</div><div class="kpi-label">Alunos cadastrados</div></div>
+      <div class="kpi-card"><i class="fa-solid fa-book"></i><div class="kpi-num">${totalEnrollments}</div><div class="kpi-label">Matrículas ativas</div></div>
+      <div class="kpi-card"><i class="fa-solid fa-certificate"></i><div class="kpi-num">${certs.length}</div><div class="kpi-label">Certificados emitidos</div></div>
+      <div class="kpi-card"><i class="fa-solid fa-sack-dollar"></i><div class="kpi-num">${fmtBRL(totalRevenue)}</div><div class="kpi-label">Receita via Pix</div></div>
+    </div>
+    <h3 style="font-size:17px;margin:30px 0 14px;">Cursos mais procurados</h3>
+    <div class="table-wrap"><table class="admin-table">
+      <thead><tr><th>Curso</th><th>Matrículas</th><th>Receita</th></tr></thead>
+      <tbody>
+      ${COURSES.map(c=>{
+        const n = users.reduce((a,u)=>a+(u.enrollments||[]).filter(e=>e.courseId===c.id).length,0);
+        return `<tr><td>${c.name}</td><td>${n}</td><td>${fmtBRL(n*c.price)}</td></tr>`;
+      }).sort().join("")}
+      </tbody>
+    </table></div>`;
+    return;
+  }
+
+  if(tab==="alunos"){
+    main.innerHTML = `
+    <div class="dash-header"><h2>Alunos (${users.length})</h2></div>
+    <div class="table-wrap"><table class="admin-table">
+      <thead><tr><th>Nome</th><th>E-mail</th><th>WhatsApp</th><th>Cursos</th><th>Cadastro</th></tr></thead>
+      <tbody>
+      ${users.length===0 ? `<tr><td colspan="5" style="text-align:center;color:var(--muted);">Nenhum aluno cadastrado ainda.</td></tr>` :
+        users.map(u=>`<tr><td>${u.name}</td><td>${u.email}</td><td>${u.phone||'—'}</td><td>${(u.enrollments||[]).length}</td><td>${new Date(u.createdAt).toLocaleDateString('pt-BR')}</td></tr>`).join("")}
+      </tbody>
+    </table></div>`;
+    return;
+  }
+
+  if(tab==="cursos"){
+    main.innerHTML = `
+    <div class="dash-header"><h2>Cursos (${COURSES.length})</h2></div>
+    <div class="table-wrap"><table class="admin-table">
+      <thead><tr><th>Curso</th><th>Categoria</th><th>Preço</th><th>Carga horária</th><th>Aulas</th></tr></thead>
+      <tbody>
+      ${COURSES.map(c=>`<tr><td>${c.name}</td><td>${c.category}</td><td>${fmtBRL(c.price)}</td><td>${c.duration}</td><td>${c.lessons}</td></tr>`).join("")}
+      </tbody>
+    </table></div>
+    <p style="font-size:12.5px;color:var(--muted);margin-top:14px;">Edição/criação de cursos em produção requer painel de CRUD conectado ao backend.</p>`;
+    return;
+  }
+
+  if(tab==="pagamentos"){
+    const statusMap = {
+      paid:    {label:"Pago",      cls:"green"},
+      pending: {label:"Pendente",  cls:"gold"},
+      expired: {label:"Expirado",  cls:"red"},
+      refused: {label:"Recusado",  cls:"red"}
+    };
+    const countByStatus = s => payments.filter(p=>p.status===s).length;
+    main.innerHTML = `
+    <div class="dash-header"><h2>Pedidos — Gateway NexusPag (${payments.length})</h2></div>
+    <div class="kpi-row">
+      <div class="kpi-card"><i class="fa-solid fa-circle-check" style="color:var(--success);"></i><div class="kpi-num">${countByStatus('paid')}</div><div class="kpi-label">Pagos</div></div>
+      <div class="kpi-card"><i class="fa-solid fa-clock" style="color:var(--gold-500);"></i><div class="kpi-num">${countByStatus('pending')}</div><div class="kpi-label">Pendentes</div></div>
+      <div class="kpi-card"><i class="fa-solid fa-hourglass-end"></i><div class="kpi-num">${countByStatus('expired')}</div><div class="kpi-label">Expirados</div></div>
+      <div class="kpi-card"><i class="fa-solid fa-circle-xmark" style="color:var(--danger);"></i><div class="kpi-num">${countByStatus('refused')}</div><div class="kpi-label">Recusados</div></div>
+    </div>
+    <div class="table-wrap"><table class="admin-table">
+      <thead><tr><th>Pedido</th><th>Aluno</th><th>Curso</th><th>Valor</th><th>Cobrança NexusPag</th><th>Status</th><th>Criado em</th></tr></thead>
+      <tbody>
+      ${payments.length===0 ? `<tr><td colspan="7" style="text-align:center;color:var(--muted);">Nenhum pedido registrado ainda.</td></tr>` :
+        payments.map(p=>{
+          const st = statusMap[p.status] || {label:p.status, cls:"gold"};
+          return `<tr><td>${p.id}</td><td>${p.studentName}</td><td>${p.courseName}</td><td>${fmtBRL(p.amount)}</td><td><code style="font-size:11.5px;">${p.chargeId||'—'}</code></td><td><span class="badge ${st.cls}">${st.label}</span></td><td>${new Date(p.createdAt).toLocaleDateString('pt-BR')} ${new Date(p.createdAt).toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'})}</td></tr>`;
+        }).join("")}
+      </tbody>
+    </table></div>
+    <p style="font-size:12.5px;color:var(--muted);margin-top:14px;">Esta tabela reflete o status de cada cobrança na NexusPag (pendente/pago/expirado/recusado). Em produção, ela deve ser alimentada pelo webhook da NexusPag assim que cada evento ocorrer.</p>`;
+    return;
+  }
+
+  if(tab==="certificados"){
+    main.innerHTML = `
+    <div class="dash-header"><h2>Certificados emitidos (${certs.length})</h2></div>
+    <div class="table-wrap"><table class="admin-table">
+      <thead><tr><th>Aluno</th><th>Curso</th><th>Código</th><th>Emitido em</th></tr></thead>
+      <tbody>
+      ${certs.length===0 ? `<tr><td colspan="4" style="text-align:center;color:var(--muted);">Nenhum certificado emitido ainda.</td></tr>` :
+        certs.map(c=>`<tr><td>${c.studentName}</td><td>${c.courseName}</td><td><span class="badge gold">${c.code}</span></td><td>${new Date(c.issuedAt).toLocaleDateString('pt-BR')}</td></tr>`).join("")}
+      </tbody>
+    </table></div>`;
+    return;
+  }
+}
+
+/* ================================================================
+   LEGAL PAGES
+   ================================================================ */
+function renderSobre(){
+  return `<div class="legal-page">
+    <h1>Sobre a FORMAC Formação</h1>
+    <p>A FORMAC Formação é uma instituição dedicada à formação profissional nas áreas de segurança privada e emergência, com cursos homologados e reconhecidos nacionalmente. Nossa missão é preparar profissionais qualificados, éticos e prontos para o mercado de trabalho, unindo teoria sólida, prática realista e tecnologia de ensino.</p>
+    <h3>Nossa história</h3>
+    <p>Desde a fundação, já formamos milhares de vigilantes, brigadistas, bombeiros civis e agentes de segurança pessoal em todo o país, sempre com foco em qualidade pedagógica e credibilidade institucional.</p>
+    <h3>Nosso compromisso</h3>
+    <p>Trabalhamos com transparência, respeito às normas técnicas e legislação vigente, e cuidado rigoroso com a proteção de dados pessoais dos nossos alunos, em conformidade com a LGPD.</p>
+  </div>`;
+}
+function renderPrivacidade(){
+  return `<div class="legal-page">
+    <h1>Política de Privacidade</h1>
+    <p>A FORMAC Formação respeita a sua privacidade e está comprometida com a proteção dos seus dados pessoais, em conformidade com a Lei Geral de Proteção de Dados (Lei nº 13.709/2018 — LGPD).</p>
+    <h3>1. Dados coletados</h3>
+    <p>Coletamos nome, CPF, e-mail, telefone e dados de pagamento estritamente necessários para realizar sua matrícula, emitir certificados e manter contato sobre os cursos.</p>
+    <h3>2. Uso dos dados</h3>
+    <ul>
+      <li>Processamento de matrículas e emissão de certificados;</li>
+      <li>Comunicação sobre andamento do curso e suporte;</li>
+      <li>Cumprimento de obrigações legais e regulatórias.</li>
+    </ul>
+    <h3>3. Armazenamento e segurança</h3>
+    <p>Os dados são armazenados de forma criptografada, com controle de acesso restrito e monitoramento contínuo, adotando medidas técnicas e administrativas para prevenir acessos não autorizados, incidentes e vazamentos.</p>
+    <h3>4. Seus direitos</h3>
+    <p>Você pode solicitar a qualquer momento a confirmação, correção, portabilidade ou exclusão dos seus dados pessoais, entrando em contato pelo e-mail contato@formacformacao.com.br.</p>
+    <h3>5. Compartilhamento</h3>
+    <p>Não compartilhamos seus dados com terceiros para fins comerciais. Dados podem ser compartilhados apenas com órgãos reguladores quando exigido por lei (ex: emissão de CNV junto à Polícia Federal).</p>
+  </div>`;
+}
+function renderTermos(){
+  return `<div class="legal-page">
+    <h1>Termos de Uso</h1>
+    <p>Ao utilizar a plataforma da FORMAC Formação, você concorda com os termos descritos abaixo.</p>
+    <h3>1. Cadastro</h3>
+    <p>O aluno é responsável pela veracidade das informações fornecidas no cadastro e pela guarda de sua senha de acesso.</p>
+    <h3>2. Matrícula e pagamento</h3>
+    <p>As matrículas são confirmadas mediante pagamento via Pix. O acesso ao conteúdo é liberado automaticamente após a confirmação do pagamento pelo sistema.</p>
+    <h3>3. Certificação</h3>
+    <p>O certificado é emitido automaticamente após a conclusão de 100% das aulas e aprovação na avaliação final, quando aplicável, respeitando as normas de cada curso.</p>
+    <h3>4. Cancelamento e reembolso</h3>
+    <p>O aluno pode solicitar cancelamento em até 7 dias corridos após a matrícula, conforme o Código de Defesa do Consumidor, mediante contato com nosso suporte.</p>
+    <h3>5. Conduta</h3>
+    <p>É vedado o compartilhamento de credenciais de acesso, a reprodução não autorizada do conteúdo e qualquer conduta que viole a legislação vigente.</p>
+  </div>`;
+}
+function renderLgpd(){
+  return `<div class="legal-page">
+    <h1>Proteção de Dados — LGPD</h1>
+    <p>A FORMAC Formação atua em conformidade com a Lei Geral de Proteção de Dados Pessoais (LGPD), adotando práticas responsáveis de tratamento de dados em toda a jornada do aluno.</p>
+    <h3>Medidas técnicas adotadas</h3>
+    <ul>
+      <li>Criptografia de dados sensíveis e senhas;</li>
+      <li>Autenticação segura de usuários;</li>
+      <li>Controle de acesso por perfil (aluno / administrador);</li>
+      <li>Consentimento explícito no cadastro para tratamento de dados;</li>
+      <li>Canal direto para exercício dos direitos do titular dos dados.</li>
+    </ul>
+    <h3>Encarregado de dados (DPO)</h3>
+    <p>Em caso de dúvidas sobre o tratamento de dados pessoais, entre em contato pelo e-mail contato@formacformacao.com.br.</p>
+  </div>`;
+}
+
+/* ================================================================
+   INIT
+   ================================================================ */
+(async function init(){
+  await tryRestoreSession();
+  showPage('landing');
+})();
+
+</script>
+</body>
+</html>
